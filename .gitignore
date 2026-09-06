@@ -3,6 +3,7 @@
 !.gitignore
 !/frontend/
 !/.github/
+!/vercel.json
 
 # Ignore frontend build & dependency files
 frontend/node_modules/
