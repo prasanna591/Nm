@@ -7,6 +7,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import SceneShell from "@/components/3d/SceneShell";
 import FounderSection from "@/components/founder/FounderSection";
 import { site, stats } from "@/data/site";
+import { collaborationTracks, coreValues, newsUpdate } from "@/data/group";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
 const LatticeGlobe = lazy(() => import("@/components/3d/LatticeGlobe"));
@@ -224,34 +225,45 @@ export default function About() {
               />
 
               <Reveal delay={0.12}>
-                <div
-                  className="values-grid"
-                  style={{
-                    marginTop: 36,
-                    display: "grid",
-                    gridTemplateColumns: "1fr 1fr",
-                    border: "1px solid var(--hairline)",
-                  }}
-                >
-                  {site.values.map((v) => (
-                    <div
-                      key={v}
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 10,
-                        padding: "0.9rem 1rem",
-                        borderRight: "1px solid var(--hairline)",
-                        borderBottom: "1px solid var(--hairline)",
-                        fontSize: "0.93rem",
-                        color: "var(--text-secondary)",
-                        background: "var(--surface)",
-                      }}
-                    >
-                      <span className="status-dot" aria-hidden="true" />
-                      {v}
-                    </div>
-                  ))}
+                <div style={{ marginTop: 36 }}>
+                  <div className="eyebrow" style={{ marginBottom: 14 }}>
+                    Core values
+                  </div>
+                  <div
+                    className="values-grid"
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: "1fr 1fr",
+                      gap: 10,
+                    }}
+                  >
+                    {coreValues.map((v) => (
+                      <div
+                        key={v.title}
+                        className="card"
+                        style={{
+                          padding: "1.1rem 1.2rem",
+                        }}
+                      >
+                        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                          <span className="status-dot" aria-hidden="true" />
+                          <span className="display-md" style={{ fontSize: "1.05rem" }}>
+                            {v.title}
+                          </span>
+                        </div>
+                        <p
+                          style={{
+                            marginTop: 8,
+                            fontSize: "0.85rem",
+                            lineHeight: 1.6,
+                            color: "var(--text-secondary)",
+                          }}
+                        >
+                          {v.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </Reveal>
 
@@ -306,6 +318,202 @@ export default function About() {
           </Suspense>
         </SceneShell>
       </section>
+
+      {/* Vision & Mission */}
+      <section
+        id="vision-mission"
+        style={{
+          paddingBlock: "5rem 4rem",
+          borderTop: "1px solid var(--hairline)",
+          background: "var(--bg-secondary)",
+        }}
+      >
+        <div className="container">
+          <SectionHeading
+            index="02"
+            label="Direction"
+            title={
+              <>
+                VISION &amp;{" "}
+                <span style={{ color: "var(--accent)" }}>MISSION</span>
+              </>
+            }
+          />
+          <div
+            className="vm-grid"
+            style={{
+              marginTop: 40,
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 18,
+            }}
+          >
+            <Reveal>
+              <div className="card" style={{ height: "100%", padding: "1.9rem" }}>
+                <div className="mono eyebrow" style={{ marginBottom: 14 }}>
+                  Our vision
+                </div>
+                <p
+                  style={{
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "clamp(1.15rem, 1.8vw, 1.45rem)",
+                    lineHeight: 1.5,
+                    color: "var(--text-primary)",
+                  }}
+                >
+                  {site.vision}
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <div className="card" style={{ height: "100%", padding: "1.9rem" }}>
+                <div className="mono eyebrow" style={{ marginBottom: 14 }}>
+                  Our mission
+                </div>
+                <p
+                  style={{
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "clamp(1.15rem, 1.8vw, 1.45rem)",
+                    lineHeight: 1.5,
+                    color: "var(--text-primary)",
+                  }}
+                >
+                  {site.mission}
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Global collaborations */}
+      <section
+        id="collaborations"
+        style={{ paddingBlock: "5rem 4rem", borderTop: "1px solid var(--hairline)" }}
+      >
+        <div className="container">
+          <SectionHeading
+            index="03"
+            label="Global collaborations"
+            title={
+              <>
+                WE BUILD WITH{" "}
+                <span style={{ color: "var(--accent)" }}>PARTNERS</span>
+              </>
+            }
+            subtitle="We welcome meaningful collaborations with universities, colleges, research institutions, industries, startups and independent researchers."
+          />
+          <div
+            className="collab-grid"
+            style={{
+              marginTop: 44,
+              display: "grid",
+              gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
+              gap: 18,
+            }}
+          >
+            {collaborationTracks.map((t, i) => (
+              <Reveal key={t.title} delay={i * 0.06}>
+                <div className="card" style={{ height: "100%", padding: "1.6rem" }}>
+                  <span className="mono" style={{ fontSize: 11, color: "var(--accent)" }}>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="display-md" style={{ marginTop: 12, fontSize: "1.15rem" }}>
+                    {t.title}
+                  </h3>
+                  <p
+                    style={{
+                      marginTop: 8,
+                      fontSize: "0.88rem",
+                      lineHeight: 1.7,
+                      color: "var(--text-secondary)",
+                    }}
+                  >
+                    {t.description}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <div style={{ marginTop: 34, display: "flex", justifyContent: "center" }}>
+            <Link to="/contact" className="btn btn-primary" style={{ fontSize: 11.5 }}>
+              Submit collaboration enquiry <span className="btn-arrow">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* News & updates */}
+      <section
+        id="news"
+        style={{
+          paddingBlock: "5rem 6rem",
+          borderTop: "1px solid var(--hairline)",
+          background: "var(--bg-secondary)",
+        }}
+      >
+        <div className="container">
+          <SectionHeading
+            index="04"
+            label="News & updates"
+            title={
+              <>
+                WHAT&apos;S{" "}
+                <span style={{ color: "var(--accent)" }}>NEXT</span>
+              </>
+            }
+            subtitle={newsUpdate.intro}
+          />
+          <div
+            className="news-grid"
+            style={{
+              marginTop: 40,
+              display: "grid",
+              gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
+              gap: 12,
+            }}
+          >
+            {newsUpdate.channels.map((c, i) => (
+              <Reveal key={c} delay={i * 0.05}>
+                <div className="card" style={{ height: "100%", padding: "1.5rem 1.3rem" }}>
+                  <span className="status-dot" aria-hidden="true" />
+                  <div className="display-md" style={{ marginTop: 12, fontSize: "1rem" }}>
+                    {c}
+                  </div>
+                  <div
+                    className="mono"
+                    style={{
+                      marginTop: 8,
+                      fontSize: 9.5,
+                      letterSpacing: "0.12em",
+                      color: "var(--text-faint)",
+                    }}
+                  >
+                    FORTHCOMING
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <div style={{ marginTop: 28, display: "flex", justifyContent: "center" }}>
+            <Link to="/contact" className="btn btn-ghost" style={{ fontSize: 11.5 }}>
+              Request updates <span className="btn-arrow">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <style>{`
+        @media (max-width: 900px) {
+          .vm-grid { grid-template-columns: 1fr !important; }
+          .collab-grid { grid-template-columns: 1fr 1fr !important; }
+          .news-grid { grid-template-columns: 1fr 1fr !important; }
+        }
+        @media (max-width: 560px) {
+          .collab-grid { grid-template-columns: 1fr !important; }
+          .news-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
 
       <FounderSection />
     </>

@@ -5,6 +5,7 @@ import { domains } from "@/data/site";
 import SplitReveal from "@/components/ui/SplitReveal";
 import Magnetic from "@/components/ui/Magnetic";
 import { Reveal } from "@/components/ui/Reveal";
+import { openCookieSettings } from "@/lib/cookies";
 
 const cols: { title: string; links: { label: string; to: string }[] }[] = [
   {
@@ -12,23 +13,36 @@ const cols: { title: string; links: { label: string; to: string }[] }[] = [
     links: [
       { label: "Home", to: "/" },
       { label: "About", to: "/about" },
+      { label: "Companies", to: "/companies" },
+      { label: "Careers", to: "/careers" },
       { label: "Contact", to: "/contact" },
     ],
   },
   {
     title: "Research",
-    links: domains.slice(0, 5).map((d) => ({
-      label: d.shortTitle,
-      to: `/research?domain=${d.id}`,
-    })),
+    links: [
+      ...domains.slice(0, 4).map((d) => ({
+        label: d.shortTitle,
+        to: `/research?domain=${d.id}`,
+      })),
+      { label: "Publications", to: "/research#publications" },
+    ],
   },
   {
     title: "Services",
-    links: services.slice(0, 6).map((s) => ({ label: s.title, to: "/services" })),
+    links: [
+      ...services.slice(0, 5).map((s) => ({ label: s.title, to: "/services" })),
+      { label: "Programs", to: "/services#programs" },
+    ],
   },
   {
     title: "Global",
-    links: site.tags.map((t) => ({ label: t, to: "/about" })),
+    links: [
+      { label: "Collaborations", to: "/about#collaborations" },
+      { label: "News & Updates", to: "/about#news" },
+      { label: "Vision & Mission", to: "/about#vision-mission" },
+      { label: "Global Footprint", to: "/about" },
+    ],
   },
 ];
 
@@ -175,9 +189,58 @@ export default function Footer() {
         </div>
 
         <div
+          className="footer-legal"
+          style={{
+            marginTop: 48,
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "center",
+            gap: "10px 22px",
+          }}
+        >
+          <span
+            className="mono"
+            style={{
+              fontSize: 10,
+              letterSpacing: "0.14em",
+              color: "var(--text-faint)",
+            }}
+          >
+            LEGAL
+          </span>
+          <Link
+            to="/privacy"
+            className="link-underline"
+            style={{ fontSize: "0.82rem", color: "var(--text-secondary)" }}
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            to="/privacy#cookies"
+            className="link-underline"
+            style={{ fontSize: "0.82rem", color: "var(--text-secondary)" }}
+          >
+            Cookie Policy
+          </Link>
+          <button
+            type="button"
+            onClick={openCookieSettings}
+            className="link-underline"
+            style={{
+              padding: 0,
+              fontSize: "0.82rem",
+              color: "var(--text-secondary)",
+              textAlign: "left",
+            }}
+          >
+            Cookie Settings
+          </button>
+        </div>
+
+        <div
           className="mono"
           style={{
-            marginTop: 64,
+            marginTop: 24,
             paddingTop: 24,
             borderTop: "1px solid var(--hairline)",
             display: "flex",

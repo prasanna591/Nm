@@ -1,9 +1,11 @@
 import { lazy, Suspense, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import PageHero from "@/components/ui/PageHero";
+import SectionHeading from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import SceneShell from "@/components/3d/SceneShell";
 import { domains, totalSubjects } from "@/data/site";
+import { knowledgePillars } from "@/data/group";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
 const DNAHelix = lazy(() => import("@/components/3d/DNAHelix"));
@@ -301,6 +303,90 @@ export default function Research() {
             <DNAHelix />
           </Suspense>
         </SceneShell>
+      </section>
+
+      {/* Publications & knowledge development */}
+      <section
+        id="publications"
+        style={{
+          paddingBlock: "5rem 6rem",
+          borderTop: "1px solid var(--hairline)",
+          background: "var(--bg-secondary)",
+        }}
+      >
+        <div className="container">
+          <SectionHeading
+            index="02"
+            label="Publications & knowledge development"
+            title={
+              <>
+                KNOWLEDGE THAT{" "}
+                <span style={{ color: "var(--accent)" }}>TRAVELS</span>
+              </>
+            }
+            subtitle="Beyond the index, the foundation supports the documentation, publication and protection of research."
+          />
+          <div
+            className="knowledge-grid"
+            style={{
+              marginTop: 44,
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 18,
+            }}
+          >
+            {knowledgePillars.map((p, i) => (
+              <Reveal key={p.title} delay={i * 0.08}>
+                <div className="card" style={{ height: "100%", padding: "2rem" }}>
+                  <span className="mono" style={{ fontSize: 11, color: "var(--accent)" }}>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="display-md" style={{ marginTop: 14, fontSize: "1.5rem" }}>
+                    {p.title}
+                  </h3>
+                  <p
+                    style={{
+                      marginTop: 12,
+                      fontSize: "0.94rem",
+                      lineHeight: 1.75,
+                      color: "var(--text-secondary)",
+                    }}
+                  >
+                    {p.description}
+                  </p>
+                  <div style={{ marginTop: 20, display: "flex", flexWrap: "wrap", gap: 8 }}>
+                    {p.tags.map((t) => (
+                      <span key={t} className="tag tag-accent">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <div
+            style={{
+              marginTop: 34,
+              display: "flex",
+              justifyContent: "center",
+              gap: 12,
+              flexWrap: "wrap",
+            }}
+          >
+            <Link to="/services" className="btn btn-primary" style={{ fontSize: 11.5 }}>
+              Publication services <span className="btn-arrow">→</span>
+            </Link>
+            <Link to="/contact" className="btn btn-ghost" style={{ fontSize: 11.5 }}>
+              Discuss a manuscript
+            </Link>
+          </div>
+          <style>{`
+            @media (max-width: 760px) {
+              .knowledge-grid { grid-template-columns: 1fr !important; }
+            }
+          `}</style>
+        </div>
       </section>
 
       {/* Subject modal */}

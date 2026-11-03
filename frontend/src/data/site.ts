@@ -13,6 +13,10 @@ export const site = {
   },
   positioning:
     "A globally recognised research ecosystem empowering the next generation of scientists through research services, publication support, PhD assistance, and global conferences.",
+  vision:
+    "To become a globally recognised organisation driving scientific advancement, technological innovation, entrepreneurship and sustainable development.",
+  mission:
+    "To empower researchers, entrepreneurs, students and industries through research opportunities, innovative technologies, professional development and meaningful global collaborations.",
   heroLine: "WE RESEARCH WHAT COMES NEXT.",
   values: [
     "Scientific Integrity",

@@ -6,6 +6,7 @@ import ProcessTimeline from "@/components/home/ProcessTimeline";
 import InnovationScene from "@/components/home/InnovationScene";
 import ServicesStrip from "@/components/home/ServicesStrip";
 import StatsBand from "@/components/home/StatsBand";
+import CompaniesSection from "@/components/home/CompaniesSection";
 import InsightsSection from "@/components/home/InsightsSection";
 import AboutSection from "@/components/home/AboutSection";
 import CTASection from "@/components/home/CTASection";
@@ -37,6 +38,7 @@ export default function Home() {
       <InnovationScene />
       <ServicesStrip />
       <StatsBand />
+      <CompaniesSection />
       <InsightsSection />
       <AboutSection />
       <CTASection />

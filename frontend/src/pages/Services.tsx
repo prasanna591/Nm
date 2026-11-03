@@ -5,6 +5,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import SceneShell from "@/components/3d/SceneShell";
 import { services, deliverySteps, trustPillars } from "@/data/services";
+import { programs } from "@/data/group";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
 const AtomOrbit = lazy(() => import("@/components/3d/AtomOrbit"));
@@ -210,11 +211,94 @@ export default function Services() {
         </SceneShell>
       </section>
 
+      {/* Programs & opportunities */}
+      <section
+        id="programs"
+        style={{
+          paddingBlock: "5rem 4rem",
+          borderTop: "1px solid var(--hairline)",
+          background: "var(--bg-secondary)",
+        }}
+      >
+        <div className="container">
+          <SectionHeading
+            index="03"
+            label="Programs & opportunities"
+            title={
+              <>
+                LEARN, BUILD AND{" "}
+                <span style={{ color: "var(--accent)" }}>GROW WITH US</span>
+              </>
+            }
+            subtitle="Beyond client work, NM Research runs programs that open the ecosystem to students, early-career researchers and institutions."
+          />
+          <div
+            className="programs-grid"
+            style={{
+              marginTop: 44,
+              display: "grid",
+              gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
+              gap: 18,
+            }}
+          >
+            {programs.map((p, i) => (
+              <Reveal key={p.title} delay={i * 0.07}>
+                <div className="card" style={{ height: "100%", padding: "1.8rem" }}>
+                  <span
+                    className="mono"
+                    style={{ fontSize: 11, letterSpacing: "0.16em", color: "var(--accent-bright)" }}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="display-md" style={{ marginTop: 14, fontSize: "1.25rem" }}>
+                    {p.title}
+                  </h3>
+                  <p
+                    style={{
+                      marginTop: 10,
+                      fontSize: "0.92rem",
+                      lineHeight: 1.7,
+                      color: "var(--text-secondary)",
+                    }}
+                  >
+                    {p.description}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <div
+            style={{
+              marginTop: 34,
+              display: "flex",
+              justifyContent: "center",
+              gap: 12,
+              flexWrap: "wrap",
+            }}
+          >
+            <Link to="/careers" className="btn btn-primary" style={{ fontSize: 11.5 }}>
+              Explore careers & internships <span className="btn-arrow">→</span>
+            </Link>
+            <Link to="/contact" className="btn btn-ghost" style={{ fontSize: 11.5 }}>
+              Partner on a program
+            </Link>
+          </div>
+          <style>{`
+            @media (max-width: 980px) {
+              .programs-grid { grid-template-columns: 1fr 1fr !important; }
+            }
+            @media (max-width: 560px) {
+              .programs-grid { grid-template-columns: 1fr !important; }
+            }
+          `}</style>
+        </div>
+      </section>
+
       {/* Trust pillars */}
       <section style={{ paddingBlock: "4rem 6rem", borderTop: "1px solid var(--hairline)" }}>
         <div className="container">
           <SectionHeading
-            index="03"
+            index="04"
             label="Site-wide trust pillars"
             title={
               <>

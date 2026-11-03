@@ -8,12 +8,38 @@
 
 ## Pages
 
-- [Home](https://nmresearch.co.in/nm-research/#/): The front gate of NM Research — mission, positioning, founding stats and the six-stage research pipeline (RESEARCH → EXPERIMENT → PROTOTYPE → VALIDATION → DEPLOYMENT → IMPACT).
-- [About](https://nmresearch.co.in/nm-research/#/about): The organisation — mission, values, global footprint and a cinematic profile of the founder, Dr. Mathivanan Nallathambi.
-- [Services](https://nmresearch.co.in/nm-research/#/services): The end-to-end service catalogue mapped onto a single documented, reproducible workflow.
-- [Research](https://nmresearch.co.in/nm-research/#/research): The searchable research index — 11 domains and 250+ supported subjects, from topic framing to publication.
+- [Home](https://nmresearch.co.in/nm-research/#/): The front gate of NM Research — mission, positioning, founding stats, the five-company group and the six-stage research pipeline (RESEARCH → EXPERIMENT → PROTOTYPE → VALIDATION → DEPLOYMENT → IMPACT).
+- [About](https://nmresearch.co.in/nm-research/#/about): The organisation — vision, mission, core values, global collaborations, news and updates, global footprint and a cinematic profile of the founder, Dr. Mathivanan Nallathambi.
+- [Services](https://nmresearch.co.in/nm-research/#/services): The end-to-end service catalogue mapped onto a single documented, reproducible workflow, plus internships, mentorship, workshops and innovation programs.
+- [Research](https://nmresearch.co.in/nm-research/#/research): The searchable research index — 11 domains and 250+ supported subjects, from topic framing to publication, plus research publishing and intellectual property support.
+- [Companies](https://nmresearch.co.in/nm-research/#/companies): The NM Group of Industries and Research Foundation — five associated companies spanning startup consulting, scholarly publishing, technology programs, drone technology and healthcare innovation.
+- [Careers](https://nmresearch.co.in/nm-research/#/careers): Career opportunities and internships across research, technology, business, healthcare, engineering and publications.
+- [Privacy & Cookie Policy](https://nmresearch.co.in/nm-research/#/privacy): How personal information is collected and used, and how visitors can accept all cookies or continue with essential cookies only.
 - [Membership](https://nmresearch.co.in/nm-research/#/membership): Annual membership tiers — Community, Platinum and Prime — unlocking publications, conferences and mentorship.
 - [Contact](https://nmresearch.co.in/nm-research/#/contact): Direct contact, researcher registration and the community join flow.
+
+## Group Companies
+
+- NM Association Pvt. Ltd.: Startup development, business consulting, entrepreneurship support and professional business solutions.
+- Twin Dolphin Publications Pvt. Ltd.: Research publications, research books, scholarly publishing and patent-related documentation.
+- NM Tech Intent Pvt. Ltd.: Conferences, workshops, internships, mentorship and educational programs.
+- NM Drone Tech Pvt. Ltd.: Drone technology, sustainable agriculture, precision farming and crop protection.
+- Clyra: Healthcare and pharmaceutical innovation, patient-oriented services and therapeutic research.
+
+## Programs & Careers
+
+- Internships: Practical exposure and supervised learning opportunities for eligible students.
+- Research Mentorship: Guidance in research planning, methodology and scientific communication.
+- Workshops & Conferences: Knowledge-sharing events, training programs and professional development.
+- Innovation Programs: Hackathons, idea development and entrepreneurship initiatives.
+- Careers: Research and scientific professionals, technology and engineering professionals, business development, startup and project management, and leadership roles.
+
+## Privacy & Cookies
+
+- Essential cookies and local storage: Required for site functionality, security and remembering the visitor's cookie choice.
+- Optional cookies: Analytics cookies are used only with consent. The site does not currently use advertising or cross-site tracking cookies.
+- Consent choices: Visitors can accept all cookies or continue with essential cookies only. The choice can be changed at any time via Cookie Settings in the footer or on the privacy page.
+- Privacy contact: hello.nmassociation@gmail.com.
 
 ## Services
 

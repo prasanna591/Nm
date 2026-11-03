@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { site, domains } from "@/data/site";
 import { services } from "@/data/services";
-import { plans } from "@/data/plans";
+import { associatedCompanies } from "@/data/group";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const img = `${import.meta.env.BASE_URL}images/nm.png`;
@@ -11,8 +11,10 @@ const navCenter = [
   { label: "Home", href: "/" },
   { label: "Research", href: "/research" },
   { label: "Services", href: "/services" },
+  { label: "Companies", href: "/companies" },
   { label: "Membership", href: "/membership" },
   { label: "About", href: "/about" },
+  { label: "Careers", href: "/careers" },
 ];
 
 export default function Navbar() {
@@ -61,25 +63,23 @@ export default function Navbar() {
   const megaDefs: Record<string, { title: string; items: { label: string; to: string }[]; foot: string }> = {
     research: {
       title: "Research Domains",
-      items: domains.slice(0, 11).map((d) => ({
+      items: domains.map((d) => ({
         label: d.shortTitle,
-        to: `/research?domain=${d.id}`,
+        to: `/research/${d.id}`,
       })),
       foot: `${domains.reduce((s, d) => s + d.subjects.length, 0)}+ subjects across ${domains.length} domains`,
     },
     services: {
       title: "Services",
-      items: services.map((s) => ({ label: s.title, to: "/services" })),
+      items: services.map((s) => ({ label: s.title, to: `/services/${s.slug}` })),
       foot: "Six working services — from topic to publication",
     },
-    membership: {
-      title: "Membership",
-      items: plans.map((p) => ({
-        label: `${p.tier} · ₹${p.price.toLocaleString("en-IN")}/yr`,
-        to: "/membership",
-      })),
-      foot: "Community · Platinum · Prime",
+    companies: {
+      title: "NM Group of Companies",
+      items: associatedCompanies.map((c) => ({ label: c.name, to: `/companies/${c.slug}` })),
+      foot: "Five companies — one integrated research and innovation ecosystem",
     },
+
   };
 
   return (
@@ -136,6 +136,7 @@ export default function Navbar() {
           {/* Center nav (desktop) */}
           {isDesktop && (
             <div
+              className="nav-center"
               style={{
                 position: "absolute",
                 left: "50%",
@@ -147,7 +148,9 @@ export default function Navbar() {
               {navCenter.map((item) => (
                 <span
                   key={item.href}
-                  onMouseEnter={() => setMega(item.href)}
+                  onMouseEnter={() =>
+                    setMega(item.href === "/" ? null : item.href.replace(/^\//, ""))
+                  }
                 >
                   <Link
                     to={item.href}
@@ -373,6 +376,14 @@ export default function Navbar() {
           background: transparent;
           backdrop-filter: none;
           -webkit-backdrop-filter: none;
+        }
+        @media (max-width: 1240px) and (min-width: 1024px) {
+          .nav-center { gap: 0 !important; }
+          .nav-center .nav-link {
+            padding: 0.6rem 0.5rem !important;
+            font-size: 10.5px !important;
+            letter-spacing: 0.06em !important;
+          }
         }
       `}</style>
     </>
