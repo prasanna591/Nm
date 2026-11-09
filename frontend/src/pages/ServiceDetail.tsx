@@ -36,10 +36,10 @@ export default function ServiceDetail() {
           </>
         }
         subtitle={service.description}
-        diagram="glassware"
+
       />
 
-      <section style={{ paddingBlock: "5rem 4rem" }}>
+      <section className="section-bg-0" style={{ paddingBlock: "5rem 4rem" }}>
         <div className="container">
           <SectionHeading
             index={service.index}

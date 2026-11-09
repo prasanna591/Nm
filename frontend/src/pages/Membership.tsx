@@ -32,10 +32,10 @@ export default function Membership() {
           </>
         }
         subtitle="Three annual plans unlock publications, conferences, mentorship and more — select the tier that matches your research ambitions."
-        diagram="centrifuge"
+        diagram="distillation"
       />
 
-      <section style={{ paddingBlock: "4rem 3rem" }}>
+      <section className="section-bg-0" style={{ paddingBlock: "4rem 3rem" }}>
         <div className="container">
           <SectionHeading
             index="01"
@@ -125,7 +125,7 @@ export default function Membership() {
       </section>
 
       {/* Payment note */}
-      <section style={{ position: "relative", paddingBlock: "3rem 6rem", borderTop: "1px solid var(--hairline)", overflow: "hidden" }}>
+      <section className="section-bg-1" style={{ position: "relative", paddingBlock: "3rem 6rem", borderTop: "1px solid var(--hairline)", overflow: "hidden" }}>
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <SectionHeading
             index="02"

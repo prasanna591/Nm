@@ -4,6 +4,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import {
   careerOpportunities,
+  collaborationTracks,
   coreValues,
   internshipOpportunities,
 } from "@/data/group";
@@ -41,10 +42,10 @@ export default function Careers() {
           </>
         }
         subtitle="We welcome applications from qualified and motivated candidates interested in research, technology, business development and innovation."
-        diagram="microscope"
+        diagram="centrifuge"
       />
 
-      <section style={{ paddingBlock: "5rem 4rem" }}>
+      <section className="section-bg-0" style={{ paddingBlock: "5rem 4rem" }}>
         <div className="container">
           <SectionHeading
             index="01"
@@ -142,7 +143,7 @@ export default function Careers() {
         </div>
       </section>
 
-      <section style={{ paddingBlock: "4rem 5rem", borderTop: "1px solid var(--hairline)", background: "var(--bg-secondary)" }}>
+      <section className="section-bg-1" style={{ paddingBlock: "4rem 5rem", borderTop: "1px solid var(--hairline)" }}>
         <div className="container">
           <SectionHeading
             index="02"
@@ -190,7 +191,62 @@ export default function Careers() {
         </div>
       </section>
 
-      <section style={{ paddingBlock: "5rem 6rem", borderTop: "1px solid var(--hairline)" }}>
+      <section className="section-bg-3" style={{ paddingBlock: "5rem 4rem", borderTop: "1px solid var(--hairline)" }}>
+        <div className="container">
+          <SectionHeading
+            index="03"
+            label="Global collaborations"
+            title={
+              <>
+                WE BUILD WITH{" "}
+                <span style={{ color: "var(--accent)" }}>PARTNERS</span>
+              </>
+            }
+            subtitle="Join research collaborations across universities, institutions, industries and international networks."
+          />
+
+          <div
+            className="collab-grid"
+            style={{
+              marginTop: 44,
+              display: "grid",
+              gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
+              gap: 18,
+            }}
+          >
+            {collaborationTracks.map((t, i) => (
+              <Reveal key={t.title} delay={i * 0.06}>
+                <div className="card" style={{ height: "100%", padding: "1.6rem" }}>
+                  <span className="mono" style={{ fontSize: 11, color: "var(--accent)" }}>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="display-md" style={{ marginTop: 12, fontSize: "1.15rem" }}>
+                    {t.title}
+                  </h3>
+                  <p
+                    style={{
+                      marginTop: 8,
+                      fontSize: "0.88rem",
+                      lineHeight: 1.7,
+                      color: "var(--text-secondary)",
+                    }}
+                  >
+                    {t.description}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <div style={{ marginTop: 34, display: "flex", justifyContent: "center" }}>
+            <Link to="/contact" className="btn btn-primary" style={{ fontSize: 11.5 }}>
+              Submit collaboration enquiry <span className="btn-arrow">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-bg-2" style={{ paddingBlock: "5rem 6rem", borderTop: "1px solid var(--hairline)" }}>
         <div className="container" style={{ textAlign: "center" }}>
           <Reveal>
             <div className="mono eyebrow" style={{ justifyContent: "center", display: "flex", marginBottom: 24 }}>
@@ -229,9 +285,11 @@ export default function Careers() {
         @media (max-width: 900px) {
           .careers-grid { grid-template-columns: 1fr !important; }
           .careers-values { grid-template-columns: 1fr 1fr !important; }
+          .collab-grid { grid-template-columns: 1fr 1fr !important; }
         }
         @media (max-width: 560px) {
           .careers-values { grid-template-columns: 1fr !important; }
+          .collab-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </>

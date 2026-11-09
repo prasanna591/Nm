@@ -29,10 +29,10 @@ export default function Services() {
           </>
         }
         subtitle="End-to-end research assistance — from topic to publication. Every engagement is a documented, reproducible process, not a vague promise."
-        diagram="glassware"
+
       />
 
-      <section style={{ paddingBlock: "5rem 3rem" }}>
+      <section className="section-bg-0" style={{ paddingBlock: "5rem 3rem" }}>
         <div className="container">
           <SectionHeading
             index="01"
@@ -148,7 +148,7 @@ export default function Services() {
       </section>
 
       {/* Delivery process */}
-      <section style={{ position: "relative", paddingBlock: "5rem 4rem", borderTop: "1px solid var(--hairline)", overflow: "hidden" }}>
+      <section className="section-bg-1" style={{ position: "relative", paddingBlock: "5rem 4rem", borderTop: "1px solid var(--hairline)", overflow: "hidden" }}>
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <SectionHeading
             index="02"
@@ -215,10 +215,10 @@ export default function Services() {
       {/* Programs & opportunities */}
       <section
         id="programs"
+        className="section-bg-2"
         style={{
           paddingBlock: "5rem 4rem",
           borderTop: "1px solid var(--hairline)",
-          background: "var(--bg-secondary)",
         }}
       >
         <div className="container">
@@ -296,7 +296,7 @@ export default function Services() {
       </section>
 
       {/* Trust pillars */}
-      <section style={{ paddingBlock: "4rem 6rem", borderTop: "1px solid var(--hairline)" }}>
+      <section className="section-bg-3" style={{ paddingBlock: "4rem 6rem", borderTop: "1px solid var(--hairline)" }}>
         <div className="container">
           <SectionHeading
             index="04"

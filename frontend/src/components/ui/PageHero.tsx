@@ -143,7 +143,7 @@ export default function PageHero({
           {label}
         </div>
 
-        <h1 className="display-xl" style={{ maxWidth: 1000 }}>
+        <h1 className={`display-xl text-read`} style={{ maxWidth: 1000 }}>
           {toLines(title).map((line, i) => (
             <span key={i} style={maskStyle}>
               <span data-ph-line style={lineStyle}>

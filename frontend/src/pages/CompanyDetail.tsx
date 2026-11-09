@@ -39,10 +39,10 @@ export default function CompanyDetail() {
           </>
         }
         subtitle={`${company.tagline} — ${company.description.toLowerCase()}`}
-        diagram="microplate"
+        diagram="slide"
       />
 
-      <section style={{ position: "relative", paddingBlock: "5rem 4rem", overflow: "hidden" }}>
+      <section className="section-bg-0" style={{ position: "relative", paddingBlock: "5rem 4rem", overflow: "hidden" }}>
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <SectionHeading
             index={company.index}

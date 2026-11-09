@@ -1,16 +1,22 @@
 :root {
   /* ---- Surfaces (clay / rosewood) ---- */
   --bg-primary: #e3d6c6;
+  --bg-primary-tone: #d9c9b4;
   --bg-secondary: #d8c9b7;
   --bg-tertiary: #ccbba6;
   --surface: #efe5d8;
   --surface-raised: #f4ece2;
 
+  /* ---- Texture ---- */
+  --grain-opacity: 0.16;
+  --grain-scale: 160px;
+  --vignette: radial-gradient(circle at 50% 50%, transparent 0%, rgba(36,28,22,0.28) 100%);
+
   /* ---- Text (espresso / warm taupe) ---- */
-  --text-primary: #241c16;
-  --text-secondary: #4a3d33;
-  --text-muted: #534337;
-  --text-faint: #5a4a3e;
+  --text-primary: #1a130e;
+  --text-secondary: #33281f;
+  --text-muted: #4a3d33;
+  --text-faint: #6b5a4c;
 
   /* ---- Accent (rosewood / burgundy) ---- */
   --accent: #7e2f3a;

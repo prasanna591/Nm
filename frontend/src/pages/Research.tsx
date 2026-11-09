@@ -79,10 +79,10 @@ export default function Research() {
           </>
         }
         subtitle={`Every subject in the NM index is searchable and fully supported by the foundation — from topic framing to publication and beyond.`}
-        diagram="molecule"
+
       />
 
-      <section style={{ position: "relative", paddingBlock: "4rem 6rem", overflow: "hidden" }}>
+      <section className="section-bg-0" style={{ position: "relative", paddingBlock: "4rem 6rem", overflow: "hidden" }}>
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           {/* Search + filter */}
           <Reveal>
@@ -316,10 +316,10 @@ export default function Research() {
       {/* Publications & knowledge development */}
       <section
         id="publications"
+        className="section-bg-1"
         style={{
           paddingBlock: "5rem 6rem",
           borderTop: "1px solid var(--hairline)",
-          background: "var(--bg-secondary)",
         }}
       >
         <div className="container">

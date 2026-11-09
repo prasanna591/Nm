@@ -56,10 +56,10 @@ export default function About() {
           </>
         }
         subtitle="Become a globally recognised research and innovation foundation conducting high-impact research while empowering the next generation of researchers, scientists and innovators."
-        diagram="microscope"
+        diagram="molecule"
       />
 
-      <section style={{ position: "relative", paddingBlock: "6rem 5rem", overflow: "hidden" }}>
+      <section className="section-bg-0" style={{ position: "relative", paddingBlock: "6rem 5rem", overflow: "hidden" }}>
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <div
             className="about-page-grid"
@@ -323,10 +323,10 @@ export default function About() {
       {/* Vision & Mission */}
       <section
         id="vision-mission"
+        className="section-bg-1"
         style={{
           paddingBlock: "5rem 4rem",
           borderTop: "1px solid var(--hairline)",
-          background: "var(--bg-secondary)",
         }}
       >
         <div className="container">
@@ -390,6 +390,7 @@ export default function About() {
       {/* Global collaborations */}
       <section
         id="collaborations"
+        className="section-bg-2"
         style={{ paddingBlock: "5rem 4rem", borderTop: "1px solid var(--hairline)" }}
       >
         <div className="container">
@@ -447,10 +448,10 @@ export default function About() {
       {/* News & updates */}
       <section
         id="news"
+        className="section-bg-3"
         style={{
           paddingBlock: "5rem 6rem",
           borderTop: "1px solid var(--hairline)",
-          background: "var(--bg-secondary)",
         }}
       >
         <div className="container">
@@ -516,7 +517,7 @@ export default function About() {
         }
       `}</style>
 
-      <FounderSection />
+      <section className="section-bg-0"><FounderSection /></section>
     </>
   );
 }

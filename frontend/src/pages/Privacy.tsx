@@ -27,7 +27,7 @@ const sectionTitle = {
 
 function LegalSectionBlock({ section }: { section: LegalSection }) {
   return (
-    <section id={section.id} style={{ scrollMarginTop: 120 }}>
+    <section id={section.id} className="section-bg-0" style={{ scrollMarginTop: 120 }}>
       <h2 className="display-md" style={sectionTitle}>
         {section.title}
       </h2>
@@ -70,7 +70,7 @@ function LegalSectionBlock({ section }: { section: LegalSection }) {
 
 function CookieSection() {
   return (
-    <section id="cookies" style={{ scrollMarginTop: 120 }}>
+    <section id="cookies" className="section-bg-1" style={{ scrollMarginTop: 120 }}>
       <h2 className="display-md" style={sectionTitle}>
         Cookies and similar technologies
       </h2>
@@ -183,7 +183,7 @@ function CookieSection() {
 
 function ContactSection() {
   return (
-    <section id="contact" style={{ scrollMarginTop: 120 }}>
+    <section id="contact" className="section-bg-2" style={{ scrollMarginTop: 120 }}>
       <h2 className="display-md" style={sectionTitle}>
         Contact us
       </h2>
@@ -285,7 +285,7 @@ export default function Privacy() {
         subtitle="How we collect, use and protect your information — and how you stay in control of cookies."
       />
 
-      <section style={{ paddingBlock: "4rem 6rem" }}>
+      <section className="section-bg-3" style={{ paddingBlock: "4rem 6rem" }}>
         <div className="container">
           <div
             className="legal-layout"

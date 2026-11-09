@@ -45,7 +45,7 @@ export default function CTASection() {
         }}
       >
         <Suspense fallback={null}>
-          <LabDiagram variant="glassware" />
+          <LabDiagram variant="molecule" />
         </Suspense>
       </SceneShell>
 

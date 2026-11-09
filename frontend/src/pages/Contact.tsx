@@ -173,10 +173,10 @@ export default function Contact() {
           </>
         }
         subtitle="Research questions, publication enquiries or membership — send a message and we'll respond within 24 hours."
-        diagram="petri"
+        diagram="mitosis"
       />
 
-      <section style={{ paddingBlock: "4rem 6rem" }}>
+      <section className="section-bg-0" style={{ paddingBlock: "4rem 6rem" }}>
         <div className="container">
           <div className="contact-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: "clamp(2rem, 5vw, 5rem)" }}>
             {/* Channels */}

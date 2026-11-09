@@ -35,10 +35,10 @@ export default function Companies() {
           </>
         }
         subtitle="Our group brings together specialised initiatives across business development, publications, technology, agriculture and healthcare — connected by a shared commitment to research and innovation."
-        diagram="microplate"
+        diagram="flask"
       />
 
-      <section style={{ position: "relative", paddingBlock: "5rem 4rem", overflow: "hidden" }}>
+      <section className="section-bg-0" style={{ position: "relative", paddingBlock: "5rem 4rem", overflow: "hidden" }}>
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <SectionHeading
             index="01"
@@ -152,7 +152,7 @@ export default function Companies() {
         </SceneShell>
       </section>
 
-      <section style={{ paddingBlock: "3rem 5rem", borderTop: "1px solid var(--hairline)" }}>
+      <section className="section-bg-1" style={{ paddingBlock: "3rem 5rem", borderTop: "1px solid var(--hairline)" }}>
         <div className="container">
           <Reveal>
             <div
@@ -188,7 +188,7 @@ export default function Companies() {
         </div>
       </section>
 
-      <section style={{ paddingBlock: "4rem 6rem", borderTop: "1px solid var(--hairline)" }}>
+      <section className="section-bg-2" style={{ paddingBlock: "4rem 6rem", borderTop: "1px solid var(--hairline)" }}>
         <div className="container">
           <SectionHeading
             index="02"

@@ -37,10 +37,10 @@ export default function ResearchDomain() {
           </>
         }
         subtitle={`${domain.subjects.length} subjects in ${domain.title}, supported from topic framing to publication.`}
-        diagram="molecule"
+
       />
 
-      <section style={{ paddingBlock: "5rem 4rem" }}>
+      <section className="section-bg-0" style={{ paddingBlock: "5rem 4rem" }}>
         <div className="container">
           <SectionHeading
             index="01"
