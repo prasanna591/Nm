@@ -153,7 +153,7 @@ function OrbitRing({
     <group ref={spin}>
       <lineLoop geometry={geo}>
         <lineBasicMaterial
-          color="#851509"
+          color="#7e2f3a"
           transparent
           opacity={0.16}
           depthWrite={false}
@@ -161,7 +161,7 @@ function OrbitRing({
       </lineLoop>
       <points geometry={dots}>
         <pointsMaterial
-          color="#851509"
+          color="#7e2f3a"
           size={0.07}
           sizeAttenuation
           transparent
@@ -171,11 +171,11 @@ function OrbitRing({
       </points>
       <mesh position={[radius, 0, 0]}>
         <sphereGeometry args={[0.06, 10, 10]} />
-        <meshBasicMaterial color="#851509" />
+        <meshBasicMaterial color="#7e2f3a" />
       </mesh>
       <mesh position={[-radius, 0, 0]}>
         <sphereGeometry args={[0.04, 10, 10]} />
-        <meshBasicMaterial color="#3a2a22" />
+        <meshBasicMaterial color="#241c16" />
       </mesh>
     </group>
   );
@@ -188,7 +188,7 @@ function RadarSweep({ reduced, radius = 4.35 }: { reduced: boolean; radius?: num
   const radar = useMemo(() => {
     const geo = arcGeo(radius, -1.1, 1.1);
     const mat = new THREE.LineBasicMaterial({
-      color: "#851509",
+      color: "#7e2f3a",
       transparent: true,
       opacity: 0.6,
       depthWrite: false,
@@ -206,7 +206,7 @@ function RadarSweep({ reduced, radius = 4.35 }: { reduced: boolean; radius?: num
       <primitive object={radar} />
       <mesh position={[radius, 0, 0]}>
         <sphereGeometry args={[0.07, 10, 10]} />
-        <meshBasicMaterial color="#851509" />
+        <meshBasicMaterial color="#7e2f3a" />
       </mesh>
     </group>
   );
@@ -374,9 +374,9 @@ function NeuralWeb({
     const cx = cv.getContext("2d");
     if (!cx) return null;
     const g = cx.createRadialGradient(128, 128, 8, 128, 128, 124);
-    g.addColorStop(0, "rgba(133,21,9,0.55)");
-    g.addColorStop(0.5, "rgba(133,21,9,0.16)");
-    g.addColorStop(1, "rgba(133,21,9,0)");
+    g.addColorStop(0, "rgba(126,47,58,0.55)");
+    g.addColorStop(0.5, "rgba(126,47,58,0.16)");
+    g.addColorStop(1, "rgba(126,47,58,0)");
     cx.fillStyle = g;
     cx.fillRect(0, 0, 256, 256);
     return new THREE.CanvasTexture(cv);
@@ -399,7 +399,7 @@ function NeuralWeb({
             depthWrite={false}
             uniforms={{
               uTime: { value: 0 },
-              uColor: { value: new THREE.Color("#3a2a22") },
+              uColor: { value: new THREE.Color("#241c16") },
               uOpacity: { value: 0.7 },
               uSize: { value: 0.26 },
             }}
@@ -413,7 +413,7 @@ function NeuralWeb({
           </bufferGeometry>
           <pointsMaterial
             ref={hubPoints}
-            color="#851509"
+            color="#7e2f3a"
             size={0.17}
             sizeAttenuation
             transparent
@@ -429,7 +429,7 @@ function NeuralWeb({
           </bufferGeometry>
           <lineBasicMaterial
             ref={links}
-            color="#851509"
+            color="#7e2f3a"
             transparent
             opacity={0.22}
             depthWrite={false}
@@ -440,8 +440,8 @@ function NeuralWeb({
         <mesh ref={core}>
           <icosahedronGeometry args={[0.85, 1]} />
           <meshStandardMaterial
-            color="#851509"
-            emissive="#a3362a"
+            color="#7e2f3a"
+            emissive="#7e2f3a"
             emissiveIntensity={0.25}
             roughness={0.35}
             metalness={0.5}
@@ -449,11 +449,11 @@ function NeuralWeb({
         </mesh>
         <mesh>
           <icosahedronGeometry args={[1.35, 1]} />
-          <meshBasicMaterial wireframe color="#851509" transparent opacity={0.25} />
+          <meshBasicMaterial wireframe color="#7e2f3a" transparent opacity={0.25} />
         </mesh>
         <mesh ref={shellFar}>
           <icosahedronGeometry args={[3.0, 1]} />
-          <meshBasicMaterial wireframe color="#851509" transparent opacity={0.08} />
+          <meshBasicMaterial wireframe color="#7e2f3a" transparent opacity={0.08} />
         </mesh>
       </group>
 
@@ -512,7 +512,7 @@ export default function ResearchNetwork({
       aria-hidden="true"
     >
       <ambientLight intensity={0.6} />
-      <pointLight position={[0, 3, 4]} intensity={0.7} color="#851509" />
+      <pointLight position={[0, 3, 4]} intensity={0.7} color="#7e2f3a" />
       <NeuralWeb progressRef={progressRef} reduced={reduced} isDesktop={isDesktop} />
     </Canvas>
   );

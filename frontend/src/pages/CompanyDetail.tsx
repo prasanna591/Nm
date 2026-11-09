@@ -39,6 +39,7 @@ export default function CompanyDetail() {
           </>
         }
         subtitle={`${company.tagline} — ${company.description.toLowerCase()}`}
+        diagram="microplate"
       />
 
       <section style={{ position: "relative", paddingBlock: "5rem 4rem", overflow: "hidden" }}>

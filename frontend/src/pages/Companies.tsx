@@ -35,6 +35,7 @@ export default function Companies() {
           </>
         }
         subtitle="Our group brings together specialised initiatives across business development, publications, technology, agriculture and healthcare — connected by a shared commitment to research and innovation."
+        diagram="microplate"
       />
 
       <section style={{ position: "relative", paddingBlock: "5rem 4rem", overflow: "hidden" }}>
@@ -170,7 +171,7 @@ export default function Companies() {
                   style={{
                     padding: "1.7rem 1.4rem",
                     textAlign: "center",
-                    background: i === 0 ? "rgba(133,21,9,0.07)" : "var(--surface)",
+                    background: i === 0 ? "rgba(126,47,58,0.07)" : "var(--surface)",
                     borderRight: i < groupMetrics.length - 1 ? "1px solid var(--hairline)" : "none",
                   }}
                 >

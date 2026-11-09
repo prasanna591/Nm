@@ -74,7 +74,7 @@ function Tower({
         <cylinderGeometry args={[r, r * 1.12, y * 2, 6, 1]} />
         <meshStandardMaterial
           ref={fill}
-          color={accent ? "#851509" : "#f8f2e4"}
+          color={accent ? "#7e2f3a" : "#f4ece2"}
           transparent
           opacity={0.09}
           roughness={0.5}
@@ -86,7 +86,7 @@ function Tower({
         <meshBasicMaterial
           ref={wireframe}
           wireframe
-          color="#851509"
+          color="#7e2f3a"
           transparent
           opacity={accent ? 0.5 : 0.24}
         />
@@ -94,7 +94,7 @@ function Tower({
       {isCenter && (
         <mesh position={[0, y, 0.52]} rotation={[0, 0, 0]}>
           <sphereGeometry args={[0.05, 10, 10]} />
-          <meshBasicMaterial color="#851509" />
+          <meshBasicMaterial color="#7e2f3a" />
         </mesh>
       )}
     </group>
@@ -120,7 +120,7 @@ function BaseRing({ reduced }: { reduced: boolean }) {
       <bufferGeometry>
         <bufferAttribute attach="attributes-position" args={[ring, 3]} />
       </bufferGeometry>
-      <lineBasicMaterial color="#851509" transparent opacity={0.3} />
+      <lineBasicMaterial color="#7e2f3a" transparent opacity={0.3} />
     </lineLoop>
   );
 }
@@ -192,7 +192,7 @@ export default function PrismTowers() {
       style={{ background: "transparent" }}
     >
       <ambientLight intensity={0.6} />
-      <pointLight position={[2, 4, 4]} intensity={0.7} color="#851509" />
+      <pointLight position={[2, 4, 4]} intensity={0.7} color="#7e2f3a" />
       <Float speed={1.3} rotationIntensity={0.18} floatIntensity={0.5}>
         <Cluster reduced={reduced} />
       </Float>

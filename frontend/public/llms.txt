@@ -8,15 +8,15 @@
 
 ## Pages
 
-- [Home](https://nmresearch.co.in/nm-research/#/): The front gate of NM Research — mission, positioning, founding stats, the five-company group and the six-stage research pipeline (RESEARCH → EXPERIMENT → PROTOTYPE → VALIDATION → DEPLOYMENT → IMPACT).
-- [About](https://nmresearch.co.in/nm-research/#/about): The organisation — vision, mission, core values, global collaborations, news and updates, global footprint and a cinematic profile of the founder, Dr. Mathivanan Nallathambi.
-- [Services](https://nmresearch.co.in/nm-research/#/services): The end-to-end service catalogue mapped onto a single documented, reproducible workflow, plus internships, mentorship, workshops and innovation programs.
-- [Research](https://nmresearch.co.in/nm-research/#/research): The searchable research index — 11 domains and 250+ supported subjects, from topic framing to publication, plus research publishing and intellectual property support.
-- [Companies](https://nmresearch.co.in/nm-research/#/companies): The NM Group of Industries and Research Foundation — five associated companies spanning startup consulting, scholarly publishing, technology programs, drone technology and healthcare innovation.
-- [Careers](https://nmresearch.co.in/nm-research/#/careers): Career opportunities and internships across research, technology, business, healthcare, engineering and publications.
-- [Privacy & Cookie Policy](https://nmresearch.co.in/nm-research/#/privacy): How personal information is collected and used, and how visitors can accept all cookies or continue with essential cookies only.
-- [Membership](https://nmresearch.co.in/nm-research/#/membership): Annual membership tiers — Community, Platinum and Prime — unlocking publications, conferences and mentorship.
-- [Contact](https://nmresearch.co.in/nm-research/#/contact): Direct contact, researcher registration and the community join flow.
+- [Home](https://nmresearch.co.in/#/): The front gate of NM Research — mission, positioning, founding stats, the five-company group and the six-stage research pipeline (RESEARCH → EXPERIMENT → PROTOTYPE → VALIDATION → DEPLOYMENT → IMPACT).
+- [About](https://nmresearch.co.in/#/about): The organisation — vision, mission, core values, global collaborations, news and updates, global footprint and a cinematic profile of the founder, Dr. Mathivanan Nallathambi.
+- [Services](https://nmresearch.co.in/#/services): The end-to-end service catalogue mapped onto a single documented, reproducible workflow, plus internships, mentorship, workshops and innovation programs.
+- [Research](https://nmresearch.co.in/#/research): The searchable research index — 11 domains and 250+ supported subjects, from topic framing to publication, plus research publishing and intellectual property support.
+- [Companies](https://nmresearch.co.in/#/companies): The NM Group of Industries and Research Foundation — five associated companies spanning startup consulting, scholarly publishing, technology programs, drone technology and healthcare innovation.
+- [Careers](https://nmresearch.co.in/#/careers): Career opportunities and internships across research, technology, business, healthcare, engineering and publications.
+- [Privacy & Cookie Policy](https://nmresearch.co.in/#/privacy): How personal information is collected and used, and how visitors can accept all cookies or continue with essential cookies only.
+- [Membership](https://nmresearch.co.in/#/membership): Annual membership tiers — Community, Platinum and Prime — unlocking publications, conferences and mentorship.
+- [Contact](https://nmresearch.co.in/#/contact): Direct contact, researcher registration and the community join flow.
 
 ## Group Companies
 
@@ -76,6 +76,6 @@
 ## Contact
 
 - Email: hello.nmassociation@gmail.com
-- Website: https://nmresearch.co.in/nm-research/
+- Website: https://nmresearch.co.in/
 - Offices: India · USA · UK · Canada · Malaysia · Saudi Arabia · Singapore · Japan
 - WhatsApp community: https://chat.whatsapp.com/8U1z9l21pb55NrnczHdFes

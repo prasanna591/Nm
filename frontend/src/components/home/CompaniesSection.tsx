@@ -94,7 +94,7 @@ export default function CompaniesSection() {
       </div>
 
       <style>{`
-        .company-row:hover { background: rgba(133,21,9,0.04); }
+        .company-row:hover { background: rgba(126,47,58,0.04); }
         .company-row:hover .company-row-title { color: var(--accent-bright); }
         .company-row:hover .company-row-arrow { transform: translateX(6px); }
         @media (max-width: 760px) {

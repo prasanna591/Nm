@@ -41,6 +41,7 @@ export default function Careers() {
           </>
         }
         subtitle="We welcome applications from qualified and motivated candidates interested in research, technology, business development and innovation."
+        diagram="microscope"
       />
 
       <section style={{ paddingBlock: "5rem 4rem" }}>
@@ -119,7 +120,7 @@ export default function Careers() {
                 marginTop: 30,
                 border: "1px solid var(--accent-line)",
                 borderRadius: "var(--radius-md)",
-                background: "linear-gradient(160deg, rgba(133,21,9,0.09), var(--surface) 60%)",
+                background: "linear-gradient(160deg, rgba(126,47,58,0.09), var(--surface) 60%)",
                 padding: "1.5rem 1.7rem",
               }}
             >

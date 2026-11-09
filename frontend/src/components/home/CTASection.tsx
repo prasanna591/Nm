@@ -1,9 +1,13 @@
+import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { site } from "@/data/site";
 import { Reveal } from "@/components/ui/Reveal";
 import SplitReveal from "@/components/ui/SplitReveal";
 import Magnetic from "@/components/ui/Magnetic";
 import Marquee from "@/components/ui/Marquee";
+import SceneShell from "@/components/3d/SceneShell";
+
+const LabDiagram = lazy(() => import("@/components/3d/LabDiagram"));
 
 export default function CTASection() {
   return (
@@ -21,9 +25,29 @@ export default function CTASection() {
           position: "absolute",
           inset: 0,
           background:
-            "radial-gradient(ellipse 60% 70% at 50% 100%, rgba(133,21,9,0.12), transparent 70%)",
+            "radial-gradient(ellipse 60% 70% at 50% 100%, rgba(126,47,58,0.12), transparent 70%)",
         }}
       />
+
+      <SceneShell
+        className="scene-stage home-lab-stage"
+        intensity={0.5}
+        desktopOnly
+        style={{
+          top: "4%",
+          right: "-2%",
+          width: "min(42vw, 560px)",
+          height: "78%",
+          maskImage:
+            "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 24%, black 55%)",
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 24%, black 55%)",
+        }}
+      >
+        <Suspense fallback={null}>
+          <LabDiagram variant="glassware" />
+        </Suspense>
+      </SceneShell>
 
       <div className="container" style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
         <Reveal>
@@ -35,7 +59,7 @@ export default function CTASection() {
         <SplitReveal as="h2" className="display-xl" stagger={0.08}>
           <span style={{ maxWidth: 1000, display: "inline-block" }}>
             HAVE A QUESTION{" "}
-            <span style={{ color: "var(--text-muted)", fontWeight: 300 }}>
+            <span style={{ color: "var(--text-muted)", fontWeight: "var(--weight-body)" }}>
               WORTH RESEARCHING?
             </span>
             <br />
@@ -73,6 +97,12 @@ export default function CTASection() {
       <div style={{ marginTop: "5rem", opacity: 0.9 }}>
         <Marquee items={site.stateTags} outline reverse duration={26} />
       </div>
+
+      <style>{`
+        @media (max-width: 900px) {
+          .home-lab-stage { display: none !important; }
+        }
+      `}</style>
     </section>
   );
 }

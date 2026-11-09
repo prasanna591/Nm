@@ -3,89 +3,89 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://nmresearch.co.in/nm-research/#/</loc>
+    <loc>https://nmresearch.co.in/#/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://nmresearch.co.in/nm-research/images/nm.png</image:loc>
+      <image:loc>https://nmresearch.co.in/images/nm.png</image:loc>
       <image:title>NM Research logo</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://nmresearch.co.in/nm-research/#/about</loc>
+    <loc>https://nmresearch.co.in/#/about</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nmresearch.co.in/nm-research/#/services</loc>
+    <loc>https://nmresearch.co.in/#/services</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nmresearch.co.in/nm-research/#/research</loc>
+    <loc>https://nmresearch.co.in/#/research</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nmresearch.co.in/nm-research/#/companies</loc>
+    <loc>https://nmresearch.co.in/#/companies</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nmresearch.co.in/nm-research/#/companies/nm-association</loc>
+    <loc>https://nmresearch.co.in/#/companies/nm-association</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nmresearch.co.in/nm-research/#/companies/twin-dolphin-publications</loc>
+    <loc>https://nmresearch.co.in/#/companies/twin-dolphin-publications</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nmresearch.co.in/nm-research/#/companies/nm-tech-intent</loc>
+    <loc>https://nmresearch.co.in/#/companies/nm-tech-intent</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nmresearch.co.in/nm-research/#/companies/nm-drone-tech</loc>
+    <loc>https://nmresearch.co.in/#/companies/nm-drone-tech</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nmresearch.co.in/nm-research/#/companies/clyra</loc>
+    <loc>https://nmresearch.co.in/#/companies/clyra</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nmresearch.co.in/nm-research/#/careers</loc>
+    <loc>https://nmresearch.co.in/#/careers</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nmresearch.co.in/nm-research/#/privacy</loc>
+    <loc>https://nmresearch.co.in/#/privacy</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://nmresearch.co.in/nm-research/#/membership</loc>
+    <loc>https://nmresearch.co.in/#/membership</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nmresearch.co.in/nm-research/#/contact</loc>
+    <loc>https://nmresearch.co.in/#/contact</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

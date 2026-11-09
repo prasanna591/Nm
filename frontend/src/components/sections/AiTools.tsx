@@ -82,7 +82,7 @@ export default function AiTools() {
       )}
 
       <style>{`
-        .ai-tool:hover { border-color: var(--accent-line) !important; background: rgba(133,21,9,0.05) !important; }
+        .ai-tool:hover { border-color: var(--accent-line) !important; background: rgba(126,47,58,0.05) !important; }
         @media (max-width: 980px) {
           .ai-tools-grid { grid-template-columns: 1fr 1fr !important; }
         }

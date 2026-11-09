@@ -39,9 +39,9 @@ function StatusBox({ status, successMsg }: { status: Status; successMsg: string 
         borderRadius: "var(--radius-sm)",
         fontSize: "0.92rem",
         lineHeight: 1.6,
-        border: ok ? "1px solid #3f8f5f" : "1px solid #b3563a",
-        background: ok ? "rgba(63,143,95,0.08)" : "rgba(179,86,58,0.08)",
-        color: ok ? "#c9e6d2" : "#f0c4ae",
+        border: ok ? "1px solid #2f6b47" : "1px solid #8a3a24",
+        background: ok ? "rgba(47,107,71,0.1)" : "rgba(138,58,36,0.1)",
+        color: ok ? "#1f5134" : "#6f2b18",
       }}
     >
       {ok ? successMsg : "Couldn't send — please check your details and try again."}
@@ -68,7 +68,8 @@ export default function Contact() {
 
   async function submitMsg(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
     if (fd.get("hp")) return;
     if (!["name", "email", "subject", "message"].every((k) => String(fd.get(k) || "").trim())) {
       setMsgStatus("error");
@@ -87,14 +88,15 @@ export default function Contact() {
       "NM Research Website",
     );
     setMsgStatus(res.success ? "success" : "error");
-    if (res.success) e.currentTarget.reset();
+    if (res.success) form.reset();
   }
 
   async function submitReg(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
     if (fd.get("hp")) {
-      e.currentTarget.reset();
+      form.reset();
       setRegStatus("success");
       return;
     }
@@ -120,14 +122,15 @@ export default function Contact() {
       "NM Group of Industries — Registration Form",
     );
     setRegStatus(res.success ? "success" : "error");
-    if (res.success) e.currentTarget.reset();
+    if (res.success) form.reset();
   }
 
   async function submitComm(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
     if (fd.get("hp")) {
-      e.currentTarget.reset();
+      form.reset();
       setCommStatus("success");
       return;
     }
@@ -148,7 +151,7 @@ export default function Contact() {
       "NM Group of Industries — Join Community Form",
     );
     setCommStatus(res.success ? "success" : "error");
-    if (res.success) e.currentTarget.reset();
+    if (res.success) form.reset();
   }
 
   const channels = [
@@ -170,6 +173,7 @@ export default function Contact() {
           </>
         }
         subtitle="Research questions, publication enquiries or membership — send a message and we'll respond within 24 hours."
+        diagram="petri"
       />
 
       <section style={{ paddingBlock: "4rem 6rem" }}>
@@ -227,7 +231,7 @@ export default function Contact() {
                     marginTop: 30,
                     border: "1px solid var(--accent-line)",
                     borderRadius: "var(--radius-md)",
-                    background: "rgba(133,21,9,0.07)",
+                    background: "rgba(126,47,58,0.07)",
                     padding: "1.3rem 1.4rem",
                   }}
                 >

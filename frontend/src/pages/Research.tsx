@@ -1,4 +1,4 @@
-import { lazy, Suspense, useMemo, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -36,6 +36,13 @@ export default function Research() {
   const [openDomain, setOpenDomain] = useState<string | null>(initialDomain !== "all" ? initialDomain : domains[0]?.id ?? null);
   const [selected, setSelected] = useState<string | null>(null);
 
+  // Keep the filter in sync when the route changes while this page is mounted
+  // (e.g. the chatbot navigates to /research?domain=chemistry).
+  useEffect(() => {
+    setActiveDomain(initialDomain);
+    setOpenDomain(initialDomain !== "all" ? initialDomain : domains[0]?.id ?? null);
+  }, [initialDomain]);
+
   const q = query.trim().toLowerCase();
 
   const indexed = useMemo(
@@ -72,6 +79,7 @@ export default function Research() {
           </>
         }
         subtitle={`Every subject in the NM index is searchable and fully supported by the foundation — from topic framing to publication and beyond.`}
+        diagram="molecule"
       />
 
       <section style={{ position: "relative", paddingBlock: "4rem 6rem", overflow: "hidden" }}>
@@ -271,7 +279,7 @@ export default function Research() {
                   key={m.label}
                   style={{
                     padding: "1.7rem 1.4rem",
-                    background: i === 0 ? "rgba(133,21,9,0.08)" : "var(--surface)",
+                    background: i === 0 ? "rgba(126,47,58,0.08)" : "var(--surface)",
                     borderRight: i < 3 ? "1px solid var(--hairline)" : "none",
                     textAlign: "center",
                   }}
@@ -456,7 +464,7 @@ export default function Research() {
               </Link>
             </div>
 
-            <div style={{ marginTop: 20, border: "1px solid var(--accent-line)", background: "linear-gradient(160deg, rgba(133,21,9,0.10), var(--surface) 60%)", borderRadius: "var(--radius-sm)", padding: "1.4rem" }}>
+            <div style={{ marginTop: 20, border: "1px solid var(--accent-line)", background: "linear-gradient(160deg, rgba(126,47,58,0.10), var(--surface) 60%)", borderRadius: "var(--radius-sm)", padding: "1.4rem" }}>
               <div className="eyebrow" style={{ marginBottom: 6 }}>Detailed theory &amp; case studies</div>
               <p style={{ marginTop: 6, fontSize: "0.88rem", lineHeight: 1.65, color: "var(--text-secondary)" }}>
                 A structured deep-dive PDF for {selectedSubject.name} — theory,

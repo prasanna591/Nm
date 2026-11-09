@@ -1,7 +1,20 @@
-import { Children, Fragment, isValidElement, useEffect, useRef, type ReactNode } from "react";
+import {
+  Children,
+  Fragment,
+  Suspense,
+  isValidElement,
+  lazy,
+  useEffect,
+  useRef,
+  type ReactNode,
+} from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "@/lib/gsap";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import SceneShell from "@/components/3d/SceneShell";
+import type { LabDiagramVariant } from "@/components/3d/LabDiagram";
+
+const LabDiagram = lazy(() => import("@/components/3d/LabDiagram"));
 
 const maskStyle: React.CSSProperties = {
   display: "block",
@@ -31,11 +44,13 @@ export default function PageHero({
   title,
   subtitle,
   crumb,
+  diagram,
 }: {
   label: string;
   title: ReactNode;
   subtitle?: string;
   crumb?: string;
+  diagram?: LabDiagramVariant;
 }) {
   const rootRef = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
@@ -75,10 +90,32 @@ export default function PageHero({
           inset: 0,
           pointerEvents: "none",
           background:
-            "radial-gradient(ellipse 55% 60% at 78% 10%, rgba(133,21,9,0.09), transparent 70%)",
+            "radial-gradient(ellipse 55% 60% at 78% 10%, rgba(126,47,58,0.09), transparent 70%)",
         }}
         aria-hidden="true"
       />
+
+      {diagram && (
+        <SceneShell
+          className="scene-stage page-hero-lab"
+          intensity={0.58}
+          desktopOnly
+          style={{
+            top: "6%",
+            right: "-3%",
+            width: "min(44vw, 600px)",
+            height: "82%",
+            maskImage:
+              "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.35) 22%, black 52%)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.35) 22%, black 52%)",
+          }}
+        >
+          <Suspense fallback={null}>
+            <LabDiagram variant={diagram} />
+          </Suspense>
+        </SceneShell>
+      )}
 
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
         <Link
@@ -131,6 +168,12 @@ export default function PageHero({
           </div>
         )}
       </div>
+
+      <style>{`
+        @media (max-width: 900px) {
+          .page-hero-lab { display: none !important; }
+        }
+      `}</style>
     </section>
   );
 }

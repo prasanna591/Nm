@@ -1,32 +1,36 @@
 :root {
-  /* ---- Surfaces (ivory / cream) ---- */
-  --bg-primary: #f7f1e3;
-  --bg-secondary: #f1ead9;
-  --bg-tertiary: #ebe2cf;
-  --surface: #ffffff;
-  --surface-raised: #ffffff;
+  /* ---- Surfaces (clay / rosewood) ---- */
+  --bg-primary: #e3d6c6;
+  --bg-secondary: #d8c9b7;
+  --bg-tertiary: #ccbba6;
+  --surface: #efe5d8;
+  --surface-raised: #f4ece2;
 
-  /* ---- Text (near black / warm taupe) ---- */
-  --text-primary: #16130f;
-  --text-secondary: #4c443b;
-  --text-muted: #826f68;
-  --text-faint: #a89e8d;
+  /* ---- Text (espresso / warm taupe) ---- */
+  --text-primary: #241c16;
+  --text-secondary: #4a3d33;
+  --text-muted: #534337;
+  --text-faint: #5a4a3e;
 
-  /* ---- Accent (wine / burgundy red) ---- */
-  --accent: #851509;
-  --accent-bright: #831514;
-  --accent-deep: #660b0a;
-  --accent-soft: rgba(133, 21, 9, 0.08);
-  --accent-line: rgba(133, 21, 9, 0.3);
+  /* ---- Accent (rosewood / burgundy) ---- */
+  --accent: #7e2f3a;
+  --accent-bright: #6a2530;
+  --accent-deep: #5c1e28;
+  --accent-soft: rgba(126, 47, 58, 0.1);
+  --accent-line: rgba(126, 47, 58, 0.34);
 
-  /* ---- Cream / ivory meta ---- */
-  --silver: #b9b0a1;
-  --champagne: #efe6d0;
+  /* ---- Sand / brass meta ---- */
+  --silver: #b09a86;
+  --champagne: #ecddc8;
+  --metal: #a07a4f;
+  --metal-text: #5f4528;
+  --metal-soft: rgba(160, 122, 79, 0.14);
+  --metal-line: rgba(160, 122, 79, 0.4);
 
   /* ---- Lines ---- */
-  --border-subtle: rgba(22, 19, 15, 0.08);
-  --border-strong: rgba(22, 19, 15, 0.16);
-  --hairline: rgba(22, 19, 15, 0.05);
+  --border-subtle: rgba(36, 28, 22, 0.11);
+  --border-strong: rgba(36, 28, 22, 0.2);
+  --hairline: rgba(36, 28, 22, 0.07);
 
   /* ---- Fonts ---- */
   --font-display: "Space Grotesk", sans-serif;
@@ -48,6 +52,13 @@
   --t-fast: 300ms;
   --t-med: 600ms;
   --t-slow: 1000ms;
+
+  /* ---- Type weights ---- */
+  --weight-body: 400;
+  --weight-heading: 500;
+  --weight-display: 600;
+  --weight-ui: 600;
+  --weight-label: 500;
 
   /* ---- Z ---- */
   --z-nav: 100;

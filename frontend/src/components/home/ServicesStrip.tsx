@@ -87,7 +87,7 @@ export default function ServicesStrip() {
       </div>
 
       <style>{`
-        .service-tile:hover { background: rgba(133,21,9,0.05) !important; border-color: var(--accent-line) !important; }
+        .service-tile:hover { background: rgba(126,47,58,0.05) !important; border-color: var(--accent-line) !important; }
         .service-tile:hover > span { opacity: 1 !important; transform: translateX(0) !important; }
         .service-tile:hover h3 { color: var(--accent-bright) !important; }
         .service-tile h3 { transition: color .3s var(--ease-out); }

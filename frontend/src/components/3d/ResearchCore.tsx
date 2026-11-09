@@ -203,13 +203,13 @@ function Core({ reduced }: { reduced: boolean }) {
       <Float speed={0.6} rotationIntensity={0.16} floatIntensity={0.35}>
         <mesh ref={shell}>
           <icosahedronGeometry args={[1.6, 1]} />
-          <meshBasicMaterial wireframe color="#851509" transparent opacity={0.25} />
+          <meshBasicMaterial wireframe color="#7e2f3a" transparent opacity={0.25} />
         </mesh>
         <mesh ref={knot}>
           <icosahedronGeometry args={[0.4, 1]} />
           <meshStandardMaterial
             color="#16130f"
-            emissive="#a3362a"
+            emissive="#7e2f3a"
             emissiveIntensity={0.18}
             roughness={0.35}
             metalness={0.5}

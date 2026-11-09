@@ -18,7 +18,7 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-display);
-  font-weight: 300;
+  font-weight: var(--weight-body);
   line-height: 1.6;
   font-size: 16px;
   overflow-x: hidden;
@@ -36,7 +36,7 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: #f8f2e4;
+  color: var(--bg-primary);
 }
 
 a {
@@ -58,7 +58,7 @@ img {
 }
 
 h1, h2, h3, h4, h5 {
-  font-weight: 400;
+  font-weight: var(--weight-heading);
   line-height: 1.05;
   letter-spacing: -0.02em;
 }
@@ -165,6 +165,7 @@ h1, h2, h3, h4, h5 {
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 0.68rem;
+  font-weight: var(--weight-label);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -172,7 +173,7 @@ h1, h2, h3, h4, h5 {
 
 .display-xl {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: var(--weight-display);
   font-size: clamp(2.6rem, 8vw, 5.5rem);
   line-height: 0.98;
   letter-spacing: -0.03em;
@@ -180,7 +181,7 @@ h1, h2, h3, h4, h5 {
 
 .display-lg {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: var(--weight-display);
   font-size: clamp(2rem, 5.5vw, 3.6rem);
   line-height: 1.02;
   letter-spacing: -0.02em;
@@ -188,7 +189,7 @@ h1, h2, h3, h4, h5 {
 
 .display-md {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: var(--weight-heading);
   font-size: clamp(1.4rem, 3vw, 2rem);
   line-height: 1.1;
 }
@@ -214,7 +215,7 @@ h1, h2, h3, h4, h5 {
   padding: 0.9rem 1.6rem;
   font-family: var(--font-display);
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: var(--weight-ui);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   border-radius: var(--radius-sm);
@@ -236,7 +237,7 @@ h1, h2, h3, h4, h5 {
 
 .btn-primary {
   background: var(--accent);
-  color: #f8f2e4;
+  color: #f4ece2;
 }
 .btn-primary:hover {
   background: var(--accent-deep);
@@ -264,13 +265,6 @@ h1, h2, h3, h4, h5 {
 @keyframes chatbot-float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
-}
-@keyframes chatbot-glow {
-  0%, 100% { box-shadow: 0 10px 30px rgba(16,16,16,0.18), 0 0 0 0 rgba(133,21,9,0); }
-  50% { box-shadow: 0 10px 30px rgba(16,16,16,0.18), 0 0 20px 4px rgba(133,21,9,0.15); }
-}
-.chatbot-fab {
-  animation: chatbot-float 3s ease-in-out infinite, chatbot-glow 4s ease-in-out infinite;
 }
 .chatbot-fab:hover {
   animation-play-state: paused;
@@ -347,7 +341,7 @@ h1, h2, h3, h4, h5 {
   color: var(--text-primary);
   font-family: var(--font-display);
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: var(--weight-body);
   padding: 0.85rem 1rem;
   transition: border-color var(--t-fast) var(--ease-out),
     background-color var(--t-fast) var(--ease-out);
@@ -370,7 +364,7 @@ h1, h2, h3, h4, h5 {
 select.input {
   appearance: none;
   -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23826f68' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23534337' stroke-width='1' fill='none'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   padding-right: 2.4rem;
@@ -383,6 +377,7 @@ select.input option {
 
 /* ---- Tags / chips ---- */
 .tag {
+  font-weight: var(--weight-label);
   display: inline-flex;
   align-items: center;
   padding: 0.3rem 0.7rem;
@@ -397,8 +392,8 @@ select.input option {
 }
 
 .tag-accent {
-  color: var(--accent-bright);
-  border-color: var(--accent-line);
+  color: var(--metal-text);
+  border-color: var(--metal-line);
 }
 
 /* ---- Feature card (membership) ---- */
@@ -406,10 +401,10 @@ select.input option {
   position: relative;
   background: linear-gradient(
     180deg,
-    rgba(133, 21, 9, 0.14),
+    var(--metal-soft),
     var(--surface) 38%
   );
-  border: 1px solid var(--accent-line);
+  border: 1px solid var(--metal-line);
   border-radius: var(--radius-md);
   overflow: hidden;
 }
@@ -419,7 +414,7 @@ select.input option {
   position: absolute;
   inset: 0 0 auto 0;
   height: 3px;
-  background: var(--accent);
+  background: linear-gradient(90deg, var(--accent) 0%, var(--metal) 100%);
 }
 
 /* ---- Hairline grid ---- */
@@ -532,4 +527,29 @@ select.input option {
 .chatbot-fab,
 .link-underline {
   will-change: auto;
+}
+
+/* ============================================================
+   Shared component accents
+   ============================================================ */
+
+body {
+  transition: background-color 400ms var(--ease-out), color 400ms var(--ease-out);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--silver);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--metal);
+}
+
+.chatbot-fab {
+  animation: chatbot-float 3s ease-in-out infinite, chatbot-glow-brass 4s ease-in-out infinite;
+}
+
+@keyframes chatbot-glow-brass {
+  0%, 100% { box-shadow: 0 10px 30px rgba(16,16,16,0.18), 0 0 0 0 rgba(160,122,79,0); }
+  50% { box-shadow: 0 10px 30px rgba(16,16,16,0.18), 0 0 20px 4px rgba(160,122,79,0.18); }
 }

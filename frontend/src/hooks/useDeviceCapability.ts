@@ -13,8 +13,12 @@ function detectLowPower(): boolean {
   const mem = (navigator as unknown as { deviceMemory?: number }).deviceMemory;
   const cores = (navigator as unknown as { hardwareConcurrency?: number })
     .hardwareConcurrency;
-  if (mem !== undefined && mem <= 4) return true;
-  if (cores !== undefined && cores <= 4) return true;
+
+  if (mem !== undefined && mem <= 2) return true;
+  if (cores !== undefined && cores <= 2) return true;
+  if (mem !== undefined && cores !== undefined && mem <= 4 && cores <= 4) {
+    return true;
+  }
   return false;
 }
 

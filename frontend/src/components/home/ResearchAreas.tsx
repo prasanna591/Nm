@@ -52,7 +52,7 @@ export default function ResearchAreas() {
                     borderBottom: "1px solid var(--hairline)",
                     cursor: "pointer",
                     transition: "background-color .3s",
-                    background: isActive ? "rgba(133,21,9,0.05)" : "transparent",
+                    background: isActive ? "rgba(126,47,58,0.05)" : "transparent",
                     color: "inherit",
                   }}
                   className="research-area-row"

@@ -14,6 +14,8 @@ type SceneShellProps = {
   intensity?: number;
   /** Class used for shared (mobile) stage overrides. */
   className?: string;
+  /** Skip mounting the canvas below the desktop breakpoint (CSS-hidden stages). */
+  desktopOnly?: boolean;
 };
 
 /**
@@ -26,12 +28,14 @@ export default function SceneShell({
   style,
   intensity = 0.9,
   className = "scene-stage",
+  desktopOnly = false,
 }: SceneShellProps) {
   const ref = useRef<HTMLDivElement>(null);
   const animRef = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
-  const { webgl, isLowPower } = useDeviceCapability();
-  const allowed = webgl && !isLowPower && !reduced;
+  const { webgl, isLowPower, isDesktop } = useDeviceCapability();
+  const allowed =
+    webgl && !isLowPower && !reduced && (!desktopOnly || isDesktop);
 
   useEffect(() => {
     const el = animRef.current;
@@ -88,7 +92,7 @@ export default function SceneShell({
             inset: 0,
             willChange: "transform, opacity",
             background:
-              "radial-gradient(ellipse 55% 50% at 50% 50%, rgba(133,21,9,0.08), transparent 70%)",
+              "radial-gradient(ellipse 55% 50% at 50% 50%, rgba(126,47,58,0.08), transparent 70%)",
           }}
         />
       )}

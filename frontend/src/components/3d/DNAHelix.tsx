@@ -112,7 +112,7 @@ function Helix({
         </bufferGeometry>
         <lineBasicMaterial
           ref={rungs}
-          color="#851509"
+          color="#7e2f3a"
           transparent
           opacity={0.32}
           blending={THREE.NormalBlending}
@@ -126,7 +126,7 @@ function Helix({
         </bufferGeometry>
         <pointsMaterial
           ref={accents}
-          color="#851509"
+          color="#7e2f3a"
           size={0.16}
           sizeAttenuation
           transparent

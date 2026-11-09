@@ -145,7 +145,7 @@ export function Cursor() {
             style={{
               fontSize: 9,
               letterSpacing: "0.18em",
-              color: "#f8f2e4",
+              color: "#f4ece2",
             }}
           >
             {label}
@@ -157,7 +157,7 @@ export function Cursor() {
             style={{
               fontSize: 9,
               letterSpacing: "0.18em",
-              color: "#f8f2e4",
+              color: "#f4ece2",
             }}
           >
             VIEW

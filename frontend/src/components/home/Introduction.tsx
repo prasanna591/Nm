@@ -58,7 +58,7 @@ export default function Introduction({
             WE FORGE QUIETLY. WE DON'T
             <br />
             FOLLOW TECHNOLOGY —{" "}
-            <span style={{ color: "var(--text-muted)", fontWeight: 300 }}>
+            <span style={{ color: "var(--text-muted)", fontWeight: "var(--weight-body)" }}>
               WE EXPLORE WHERE IT IS GOING.
             </span>
           </span>

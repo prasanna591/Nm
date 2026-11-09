@@ -29,6 +29,7 @@ export default function Services() {
           </>
         }
         subtitle="End-to-end research assistance — from topic to publication. Every engagement is a documented, reproducible process, not a vague promise."
+        diagram="glassware"
       />
 
       <section style={{ paddingBlock: "5rem 3rem" }}>
@@ -53,7 +54,7 @@ export default function Services() {
                     style={{
                       border: "1px solid var(--hairline)",
                       borderBottom: isOpen ? "1px solid var(--accent-line)" : "1px solid var(--hairline)",
-                      background: isOpen ? "rgba(133,21,9,0.05)" : "transparent",
+                      background: isOpen ? "rgba(126,47,58,0.05)" : "transparent",
                       transition: "border-color .4s var(--ease-out), background-color .4s var(--ease-out)",
                     }}
                   >

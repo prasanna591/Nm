@@ -68,12 +68,12 @@ function Orbit({
         <bufferGeometry>
           <bufferAttribute attach="attributes-position" args={[ring, 3]} />
         </bufferGeometry>
-        <lineBasicMaterial color="#851509" transparent opacity={0.28} />
+        <lineBasicMaterial color="#7e2f3a" transparent opacity={0.28} />
       </lineLoop>
       <group ref={electron}>
         <mesh position={[r, 0, 0]}>
           <sphereGeometry args={[0.085, 16, 16]} />
-          <meshBasicMaterial color="#f8f2e4" />
+          <meshBasicMaterial color="#f4ece2" />
         </mesh>
       </group>
     </group>
@@ -128,8 +128,8 @@ function Atom({ reduced }: { reduced: boolean }) {
         <mesh ref={core}>
           <icosahedronGeometry args={[0.32, 1]} />
           <meshStandardMaterial
-            color="#f8f2e4"
-            emissive="#851509"
+            color="#f4ece2"
+            emissive="#7e2f3a"
             emissiveIntensity={0.35}
             roughness={0.3}
             metalness={0.7}
@@ -137,11 +137,11 @@ function Atom({ reduced }: { reduced: boolean }) {
         </mesh>
         <mesh>
           <icosahedronGeometry args={[0.5, 1]} />
-          <meshBasicMaterial wireframe color="#851509" transparent opacity={0.16} />
+          <meshBasicMaterial wireframe color="#7e2f3a" transparent opacity={0.16} />
         </mesh>
         <mesh>
           <sphereGeometry args={[2.6, 16, 16]} />
-          <meshBasicMaterial color="#851509" wireframe transparent opacity={0.045} />
+          <meshBasicMaterial color="#7e2f3a" wireframe transparent opacity={0.045} />
         </mesh>
         {ORBITS.map((o) => (
           <Orbit key={o.r} {...o} reduced={reduced} energy={energy} />
@@ -164,7 +164,7 @@ export default function AtomOrbit() {
       style={{ background: "transparent" }}
     >
       <ambientLight intensity={0.55} />
-      <pointLight position={[0, 3, 4]} intensity={0.7} color="#851509" />
+      <pointLight position={[0, 3, 4]} intensity={0.7} color="#7e2f3a" />
       <Atom reduced={reduced} />
     </Canvas>
   );

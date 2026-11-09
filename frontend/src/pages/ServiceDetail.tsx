@@ -36,6 +36,7 @@ export default function ServiceDetail() {
           </>
         }
         subtitle={service.description}
+        diagram="glassware"
       />
 
       <section style={{ paddingBlock: "5rem 4rem" }}>

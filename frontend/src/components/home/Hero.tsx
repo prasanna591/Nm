@@ -10,9 +10,9 @@ const ResearchCore = lazy(() => import("@/components/3d/ResearchCore"));
 
 export default function Hero() {
   const reduced = useReducedMotion();
-  const { isLowPower } = useDeviceCapability();
+  const { isLowPower, webgl } = useDeviceCapability();
   const rootRef = useRef<HTMLElement>(null);
-  const show3D = !isLowPower;
+  const show3D = !isLowPower && webgl;
 
   useEffect(() => {
     const root = rootRef.current;
@@ -119,7 +119,7 @@ export default function Hero() {
                   position: "absolute",
                   inset: 0,
                   background:
-                    "radial-gradient(ellipse 60% 50% at 50% 45%, rgba(133,21,9,0.1), transparent 70%)",
+                    "radial-gradient(ellipse 60% 50% at 50% 45%, rgba(126,47,58,0.1), transparent 70%)",
                 }}
               />
             }
@@ -137,7 +137,7 @@ export default function Hero() {
           zIndex: 0,
           pointerEvents: "none",
           background:
-            "radial-gradient(ellipse 50% 40% at 50% 18%, rgba(133,21,9,0.13), transparent 70%)",
+            "radial-gradient(ellipse 50% 40% at 50% 18%, rgba(126,47,58,0.13), transparent 70%)",
         }}
       />
 

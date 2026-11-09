@@ -29,10 +29,11 @@ export default function InnovationScene() {
     const el = sectionRef.current;
     if (!el || reduced) return;
 
-    const ctx = gsap.context(() => {
-      const words = el.querySelectorAll("[data-stage-word]");
-      const counter = el.querySelector<HTMLElement>("[data-stage-progress]");
-      const rail = el.querySelector<HTMLElement>("[data-stage-rail]");
+      const ctx = gsap.context(() => {
+        const words = el.querySelectorAll("[data-stage-word]");
+        const counter = el.querySelector<HTMLElement>("[data-stage-progress]");
+        const rail = el.querySelector<HTMLElement>("[data-stage-rail]");
+        const initialAlpha = isDesktop ? 0.16 : 0.42;
 
       const tl = gsap.timeline({
         defaults: { force3D: true },
@@ -58,7 +59,7 @@ export default function InnovationScene() {
       words.forEach((w, i) => {
         tl.fromTo(
           w,
-          { autoAlpha: 0.16, y: 60 },
+          { autoAlpha: initialAlpha, y: 60 },
           { autoAlpha: 1, y: 0, duration: 1.4, ease: "power2.out" },
           i * unit,
         );
@@ -105,7 +106,7 @@ export default function InnovationScene() {
                   position: "absolute",
                   inset: 0,
                   background:
-                    "radial-gradient(ellipse 60% 55% at 50% 50%, rgba(133,21,9,0.09), transparent 70%)",
+                    "radial-gradient(ellipse 60% 55% at 50% 50%, rgba(126,47,58,0.09), transparent 70%)",
                 }}
               />
             }
@@ -120,7 +121,7 @@ export default function InnovationScene() {
             position: "absolute",
             inset: 0,
             background:
-              "radial-gradient(ellipse 55% 50% at 50% 50%, rgba(133,21,9,0.1), transparent 70%)",
+              "radial-gradient(ellipse 55% 50% at 50% 50%, rgba(126,47,58,0.1), transparent 70%)",
           }}
         />
       )}
@@ -258,7 +259,7 @@ export default function InnovationScene() {
               content: "";
               position: absolute;
               inset: 0;
-              background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(247,241,227,0.0), rgba(247,241,227,0.72) 78%);
+              background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(227,214,198,0), rgba(227,214,198,0.78) 78%);
             }
           }
         `}</style>

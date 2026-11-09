@@ -221,7 +221,7 @@ export default function Navbar() {
               top: 76,
               left: 0,
               right: 0,
-              background: "rgba(248,242,228,0.96)",
+              background: "rgba(227,214,198,0.97)",
               backdropFilter: "blur(20px)",
               WebkitBackdropFilter: "blur(20px)",
               borderTop: "1px solid var(--hairline)",
@@ -301,7 +301,7 @@ export default function Navbar() {
               paddingBottom: 10,
             }}
           >
-            <span className="mono eyebrow" style={{ fontSize: 10, letterSpacing: "0.18em" }}>
+            <span className="mono eyebrow" style={{ fontSize: 11, letterSpacing: "0.18em" }}>
               MENU
             </span>
             <button
@@ -321,7 +321,7 @@ export default function Navbar() {
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = "var(--accent)";
                 e.currentTarget.style.borderColor = "var(--accent)";
-                e.currentTarget.style.color = "#f8f2e4";
+                e.currentTarget.style.color = "var(--surface-raised)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = "transparent";
@@ -351,7 +351,7 @@ export default function Navbar() {
                   borderBottom: "1px solid var(--hairline)",
                 }}
               >
-                <span className="mono" style={{ fontSize: 12, color: "var(--text-muted)" }}>
+                <span className="mono" style={{ fontSize: 13, color: "var(--text-muted)" }}>
                   0{i + 1}
                 </span>
                 <span
@@ -368,7 +368,7 @@ export default function Navbar() {
 
       <style>{`
         .nav-header.is-scrolled {
-          background: rgba(248,242,228,0.85);
+          background: rgba(227,214,198,0.92);
           backdrop-filter: blur(16px);
           -webkit-backdrop-filter: blur(16px);
         }

@@ -9,6 +9,7 @@ import SceneShell from "@/components/3d/SceneShell";
 import { plans, paymentNote } from "@/data/plans";
 import { site } from "@/data/site";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { trackConversion } from "@/lib/analytics";
 
 const AtomOrbit = lazy(() => import("@/components/3d/AtomOrbit"));
 
@@ -31,6 +32,7 @@ export default function Membership() {
           </>
         }
         subtitle="Three annual plans unlock publications, conferences, mentorship and more — select the tier that matches your research ambitions."
+        diagram="centrifuge"
       />
 
       <section style={{ paddingBlock: "4rem 3rem" }}>
@@ -102,7 +104,13 @@ export default function Membership() {
                   </ul>
 
                   <button
-                    onClick={() => setPay({ plan: plan.tier, amount: plan.price })}
+                    onClick={() => {
+                      trackConversion("payment_intent", {
+                        plan: plan.tier,
+                        amount: plan.price,
+                      });
+                      setPay({ plan: plan.tier, amount: plan.price });
+                    }}
                     className={plan.featured ? "btn btn-primary" : "btn btn-ghost"}
                     style={{ marginTop: 26, width: "100%", justifyContent: "center", fontSize: 11.5 }}
                   >
@@ -237,7 +245,7 @@ export default function Membership() {
             content: "";
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse 60% 55% at 55% 50%, rgba(247,241,227,0), rgba(247,241,227,0.6) 72%);
+            background: radial-gradient(ellipse 60% 55% at 55% 50%, rgba(227,214,198,0), rgba(227,214,198,0.6) 72%);
           }
           @media (max-width: 860px) {
             .membership-scene {

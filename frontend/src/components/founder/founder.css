@@ -9,7 +9,7 @@
   --fn-graphite: #1c1c1c;
   --fn-near-black: #111111;
   --fn-warm-white: #f5f3ef;
-  --fn-warm-gray: #b8b3ac;
+  --fn-warm-gray: #b09a86;
   --fn-warm-gray-deep: #8a857c;
   --fn-burgundy: #7a171c;
   --fn-burgundy-deep: #4d0d11;
@@ -325,3 +325,35 @@
 }
 
 /* ==================== REDUCED MOTION ==================== */
+
+/* ==================== FINAL PALETTE ==================== */
+.founder-section {
+  --fn-bg: var(--bg-primary);
+  --fn-graphite: var(--text-secondary);
+  --fn-near-black: var(--text-primary);
+  --fn-warm-white: var(--bg-primary);
+  --fn-warm-gray: var(--text-muted);
+  --fn-warm-gray-deep: var(--text-muted);
+  --fn-burgundy: var(--accent);
+  --fn-burgundy-deep: var(--accent-deep);
+  --fn-hairline: var(--border-subtle);
+
+  background:
+    radial-gradient(ellipse 60% 45% at 68% 18%, var(--metal-soft), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 22% 78%, var(--accent-soft), transparent 70%),
+    var(--fn-bg);
+}
+
+.founder-name {
+  font-weight: 700;
+}
+
+.founder-role {
+  font-weight: var(--weight-ui);
+  color: var(--metal-text);
+}
+
+.founder-creds {
+  font-weight: var(--weight-label);
+  color: var(--fn-warm-gray-deep);
+}

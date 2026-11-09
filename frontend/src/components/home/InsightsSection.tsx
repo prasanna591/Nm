@@ -78,7 +78,7 @@ export default function InsightsSection() {
       </div>
 
       <style>{`
-        .insight-row:hover { background: rgba(248,242,228,0.02); }
+        .insight-row:hover { background: var(--accent-soft); }
         .insight-row:hover h3 { color: var(--accent-bright); }
         .insight-row:hover > span:last-child { transform: translateX(6px); }
         @media (max-width: 720px) {

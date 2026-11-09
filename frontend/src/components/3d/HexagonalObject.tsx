@@ -80,7 +80,7 @@ function HexPrism({
         <cylinderGeometry args={[radius, radius * 1.06, height, 6, 1]} />
         <meshStandardMaterial
           ref={fill}
-          color="#6e6a63"
+          color="#4a3d33"
           metalness={0.72}
           roughness={0.32}
           transparent
@@ -92,7 +92,7 @@ function HexPrism({
         <meshBasicMaterial
           ref={wire}
           wireframe
-          color={accent ? "#7A171C" : "#b8b3ac"}
+          color={accent ? "#7e2f3a" : "#b09a86"}
           transparent
           opacity={wireOpacity ?? 0.2}
         />
@@ -161,7 +161,7 @@ function HexObject({ reduced }: { reduced: boolean }) {
                   <bufferAttribute attach="attributes-position" args={[ring.pts, 3]} />
                 </bufferGeometry>
                 <lineBasicMaterial
-                  color="#b8b3ac"
+                  color="#b09a86"
                   transparent
                   opacity={0.24 + i * 0.06}
                   depthWrite={false}
@@ -188,7 +188,7 @@ function HexObject({ reduced }: { reduced: boolean }) {
             <bufferGeometry>
               <bufferAttribute attach="attributes-position" args={[coreRing, 3]} />
             </bufferGeometry>
-            <lineBasicMaterial color="#7A171C" transparent opacity={0.5} depthWrite={false} />
+            <lineBasicMaterial color="#7e2f3a" transparent opacity={0.5} depthWrite={false} />
           </lineLoop>
         </group>
 
@@ -200,7 +200,7 @@ function HexObject({ reduced }: { reduced: boolean }) {
           return (
             <mesh key={i} position={[x, 0, z]}>
               <sphereGeometry args={[0.05, 10, 10]} />
-              <meshBasicMaterial color="#6e6a63" transparent opacity={0.6} />
+              <meshBasicMaterial color="#4a3d33" transparent opacity={0.6} />
             </mesh>
           );
         })}
@@ -213,7 +213,7 @@ function HexObject({ reduced }: { reduced: boolean }) {
           return (
             <mesh key={i} position={[x, 0, z]} rotation={[0, 0, -a]}>
               <boxGeometry args={[1.4, 0.018, 0.018]} />
-              <meshBasicMaterial color="#b8b3ac" transparent opacity={0.16} />
+              <meshBasicMaterial color="#b09a86" transparent opacity={0.16} />
             </mesh>
           );
         })}
@@ -235,7 +235,7 @@ export default function HexagonalObject() {
     >
       <ambientLight intensity={0.8} />
       <directionalLight position={[3, 4, 3]} intensity={0.6} color="#ffffff" />
-      <pointLight position={[-3, -2, 3]} intensity={0.5} color="#7A171C" />
+      <pointLight position={[-3, -2, 3]} intensity={0.5} color="#7e2f3a" />
       <Float speed={1.2} rotationIntensity={0.12} floatIntensity={0.35}>
         <HexObject reduced={reduced} />
       </Float>

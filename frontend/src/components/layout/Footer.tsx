@@ -201,7 +201,7 @@ export default function Footer() {
           <span
             className="mono"
             style={{
-              fontSize: 10,
+              fontSize: 11,
               letterSpacing: "0.14em",
               color: "var(--text-faint)",
             }}
@@ -247,8 +247,9 @@ export default function Footer() {
             flexWrap: "wrap",
             justifyContent: "space-between",
             gap: 12,
-            fontSize: 11,
-            letterSpacing: "0.1em",
+            fontSize: 12,
+            lineHeight: 1.6,
+            letterSpacing: "0.08em",
             color: "var(--text-faint)",
           }}
         >

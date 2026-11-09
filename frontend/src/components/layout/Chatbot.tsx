@@ -134,7 +134,7 @@ export default function Chatbot() {
                 height: 34,
                 borderRadius: "var(--radius-sm)",
                 background: "var(--accent)",
-                color: "#f8f2e4",
+                color: "#f4ece2",
                 display: "grid",
                 placeItems: "center",
                 fontFamily: "var(--font-serif)",
@@ -209,7 +209,7 @@ export default function Chatbot() {
                     lineHeight: 1.55,
                     padding: "0.65rem 0.9rem",
                     borderRadius: "var(--radius-sm)",
-                    color: m.role === "user" ? "#f8f2e4" : "var(--text-primary)",
+                    color: m.role === "user" ? "#f4ece2" : "var(--text-primary)",
                     background: m.role === "user" ? "var(--accent)" : "var(--bg-secondary)",
                     border: m.role === "user" ? "none" : "1px solid var(--hairline)",
                   }}

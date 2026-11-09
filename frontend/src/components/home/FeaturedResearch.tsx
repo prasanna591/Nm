@@ -204,7 +204,7 @@ export default function FeaturedResearch() {
       </div>
 
       <style>{`
-        .project-panel:hover { background: rgba(248,242,228,0.02); }
+        .project-panel:hover { background: var(--accent-soft); }
         .project-panel:hover [data-project-index] { color: var(--accent); }
         @media (max-width: 820px) {
           .project-panel { grid-template-columns: 1fr !important; padding-left: 0.25rem !important; padding-right: 0.25rem !important; }

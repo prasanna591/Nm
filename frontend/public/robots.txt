@@ -5,4 +5,4 @@ User-agent: *
 Allow: /
 
 # Sitemap for search engines
-Sitemap: https://nmresearch.co.in/nm-research/sitemap.xml
+Sitemap: https://nmresearch.co.in/sitemap.xml

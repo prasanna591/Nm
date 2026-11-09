@@ -56,6 +56,7 @@ export default function About() {
           </>
         }
         subtitle="Become a globally recognised research and innovation foundation conducting high-impact research while empowering the next generation of researchers, scientists and innovators."
+        diagram="microscope"
       />
 
       <section style={{ position: "relative", paddingBlock: "6rem 5rem", overflow: "hidden" }}>
@@ -166,7 +167,7 @@ export default function About() {
                     border: "1px solid var(--accent-line)",
                     borderRadius: "var(--radius-md)",
                     background:
-                      "linear-gradient(160deg, rgba(133,21,9,0.14), var(--surface) 55%)",
+                      "linear-gradient(160deg, rgba(126,47,58,0.14), var(--surface) 55%)",
                     padding: "1.8rem",
                   }}
                 >

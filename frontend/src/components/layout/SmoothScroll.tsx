@@ -42,14 +42,27 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
   // Helpers for anchor scrolling
   useEffect(() => {
     function onClick(e: MouseEvent) {
-      const target = (e.target as HTMLElement).closest('a[href^="#"]');
+      const target = (e.target as HTMLElement | null)?.closest<HTMLAnchorElement>(
+        'a[href^="#"]',
+      );
       if (!target) return;
-      const href = (target as HTMLAnchorElement).getAttribute("href");
-      if (!href || href === "#") return;
-      const el = document.querySelector(href);
-      if (el && lenisRef.current) {
-        e.preventDefault();
-        lenisRef.current.scrollTo(el as HTMLElement, { offset: -80 });
+      const href = target.getAttribute("href");
+      // HashRouter links render as "#/path" — those are routes, not anchors.
+      if (!href || href === "#" || href.startsWith("#/")) return;
+      let id = href.slice(1);
+      try {
+        id = decodeURIComponent(id);
+      } catch {
+        /* keep the raw fragment */
+      }
+      const el = id ? document.getElementById(id) : null;
+      if (!el) return;
+      e.preventDefault();
+      if (lenisRef.current) {
+        lenisRef.current.scrollTo(el, { offset: -80 });
+      } else {
+        const top = el.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top, behavior: "smooth" });
       }
     }
     document.addEventListener("click", onClick);

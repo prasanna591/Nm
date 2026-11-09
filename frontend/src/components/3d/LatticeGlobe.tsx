@@ -69,7 +69,7 @@ function PulsingNode({
   return (
     <mesh ref={ref} position={position}>
       <sphereGeometry args={[0.09, 12, 12]} />
-      <meshBasicMaterial ref={material} color="#851509" transparent opacity={0.8} />
+      <meshBasicMaterial ref={material} color="#7e2f3a" transparent opacity={0.8} />
     </mesh>
   );
 }
@@ -146,7 +146,7 @@ function Globe({ reduced }: { reduced: boolean }) {
       <group ref={spin}>
       <mesh>
         <icosahedronGeometry args={[2.1, 1]} />
-        <meshBasicMaterial ref={wire} wireframe color="#851509" transparent opacity={0.3} />
+        <meshBasicMaterial ref={wire} wireframe color="#7e2f3a" transparent opacity={0.3} />
       </mesh>
 
       {latRings.map((pts, i) => (
@@ -155,7 +155,7 @@ function Globe({ reduced }: { reduced: boolean }) {
             <bufferGeometry>
               <bufferAttribute attach="attributes-position" args={[pts, 3]} />
             </bufferGeometry>
-            <lineBasicMaterial color="#851509" transparent opacity={0.28} />
+            <lineBasicMaterial color="#7e2f3a" transparent opacity={0.28} />
           </lineLoop>
         </group>
       ))}
@@ -166,7 +166,7 @@ function Globe({ reduced }: { reduced: boolean }) {
             <bufferGeometry>
               <bufferAttribute attach="attributes-position" args={[pts, 3]} />
             </bufferGeometry>
-            <lineBasicMaterial color="#851509" transparent opacity={0.22} />
+            <lineBasicMaterial color="#7e2f3a" transparent opacity={0.22} />
           </lineLoop>
         </group>
       ))}

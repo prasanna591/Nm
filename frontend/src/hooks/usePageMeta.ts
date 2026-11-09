@@ -3,7 +3,7 @@ import { useEffect } from "react";
 const DEFAULT_DESCRIPTION =
   "NM Group of Industries and Research Foundation — a globally recognised research ecosystem empowering the next generation of scientists through research services, publication support, PhD assistance, and global conferences.";
 
-const SITE_URL = "https://nmresearch.co.in/nm-research";
+const SITE_URL = "https://nmresearch.co.in";
 
 export function usePageMeta(title: string, description?: string) {
   useEffect(() => {

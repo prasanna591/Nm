@@ -96,7 +96,7 @@ export default function CookieConsent() {
           className="mono"
           style={{
             marginTop: 12,
-            fontSize: 10,
+            fontSize: 11,
             letterSpacing: "0.08em",
             color: "var(--text-faint)",
           }}
@@ -110,7 +110,7 @@ export default function CookieConsent() {
           type="button"
           onClick={() => decide("all")}
           className="btn btn-primary"
-          style={{ fontSize: 11, padding: "0.65rem 1.1rem" }}
+          style={{ fontSize: 12, padding: "0.65rem 1.1rem" }}
         >
           Accept all
         </button>
@@ -118,7 +118,7 @@ export default function CookieConsent() {
           type="button"
           onClick={() => decide("essential")}
           className="btn btn-ghost"
-          style={{ fontSize: 11, padding: "0.65rem 1.1rem" }}
+          style={{ fontSize: 12, padding: "0.65rem 1.1rem" }}
         >
           Essential only
         </button>
@@ -128,8 +128,9 @@ export default function CookieConsent() {
         className="mono"
         style={{
           marginTop: 12,
-          fontSize: 9.5,
-          letterSpacing: "0.06em",
+          fontSize: 11,
+          lineHeight: 1.6,
+          letterSpacing: "0.05em",
           color: "var(--text-faint)",
         }}
       >

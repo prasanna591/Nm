@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import QRCode from "react-qr-code";
 import { site } from "@/data/site";
 import { buildUpiUri } from "@/lib/upi";
@@ -14,6 +14,7 @@ export default function PayModal({
   onClose: () => void;
 }) {
   const [copied, setCopied] = useState(false);
+  const copyTimer = useRef<number | null>(null);
   const uri = buildUpiUri(amount, `${planName} Membership`);
 
   useEffect(() => {
@@ -29,11 +30,19 @@ export default function PayModal({
     };
   }, [onClose]);
 
+  useEffect(
+    () => () => {
+      if (copyTimer.current !== null) window.clearTimeout(copyTimer.current);
+    },
+    [],
+  );
+
   const copy = async () => {
     try {
       await navigator.clipboard.writeText(site.upi.id);
       setCopied(true);
-      setTimeout(() => setCopied(false), 1500);
+      if (copyTimer.current !== null) window.clearTimeout(copyTimer.current);
+      copyTimer.current = window.setTimeout(() => setCopied(false), 1500);
     } catch {
       /* noop */
     }
@@ -154,7 +163,7 @@ export default function PayModal({
             marginTop: 18,
             border: "1px solid var(--accent-line)",
             borderRadius: "var(--radius-sm)",
-            background: "rgba(133,21,9,0.08)",
+            background: "rgba(126,47,58,0.08)",
             padding: "0.8rem 1rem",
             fontSize: "0.86rem",
             lineHeight: 1.6,

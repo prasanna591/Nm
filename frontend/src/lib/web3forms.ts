@@ -1,3 +1,5 @@
+import { trackConversion } from "./analytics";
+
 // Web3Forms endpoint for delivering contact/registration forms by email.
 // NOTE: The access key is a public client key — not a private secret.
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
@@ -26,7 +28,10 @@ export async function submitWeb3Form(
       }),
     });
     const json = await res.json();
-    if (res.ok && json.success) return { success: true };
+    if (res.ok && json.success) {
+      trackConversion("form_submit", { form: formName, subject });
+      return { success: true };
+    }
     return { success: false, error: json.message ?? "Submission failed" };
   } catch (e) {
     return {
